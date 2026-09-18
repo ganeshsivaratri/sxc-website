@@ -1,0 +1,370 @@
+<section class="idea-section" id="idea-designing-projects">
+  <div class="idea-container">
+    <div class="section-heading">
+      <div class="heading-icon">💡</div>
+
+      <div>
+        <h2>Idea Designing Projects</h2>
+        <p>These ideas are being explored and designed. Be part of the early stage.</p>
+      </div>
+    </div>
+
+    <div class="project-grid">
+      <article class="project-card">
+        <div class="project-image campuskart-image">
+          <span class="status-badge">Idea Stage</span>
+        </div>
+
+        <div class="project-content">
+          <h3>CampusKart</h3>
+          <p>Buy, Sell, Exchange</p>
+
+          <div class="project-footer">
+            <div class="avatars">
+              <span class="avatar avatar-one"></span>
+              <span class="avatar avatar-two"></span>
+              <span class="avatar avatar-three"></span>
+            </div>
+            <span class="member-count">3 Members</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image learnloop-image">
+          <span class="status-badge">Idea Stage</span>
+        </div>
+
+        <div class="project-content">
+          <h3>LearnLoop</h3>
+          <p>Personalized Learning Roadmap</p>
+
+          <div class="project-footer">
+            <div class="avatars">
+              <span class="avatar avatar-four"></span>
+              <span class="avatar avatar-five"></span>
+              <span class="avatar avatar-six"></span>
+            </div>
+            <span class="member-count">4 Members</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image arogyal-image">
+          <span class="status-badge">Idea Stage</span>
+        </div>
+
+        <div class="project-content">
+          <h3>ArogyaAI</h3>
+          <p>Early Health Risk Detection</p>
+
+          <div class="project-footer">
+            <div class="avatars">
+              <span class="avatar avatar-seven"></span>
+              <span class="avatar avatar-eight"></span>
+              <span class="avatar avatar-nine"></span>
+            </div>
+            <span class="member-count">3 Members</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image travelmate-image">
+          <span class="status-badge">Idea Stage</span>
+        </div>
+
+        <div class="project-content">
+          <h3>TravelMate</h3>
+          <p>Student Travel Companion</p>
+
+          <div class="project-footer">
+            <div class="avatars">
+              <span class="avatar avatar-ten"></span>
+              <span class="avatar avatar-eleven"></span>
+              <span class="avatar avatar-twelve"></span>
+            </div>
+            <span class="member-count">4 Members</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image finsage-image">
+          <span class="status-badge">Idea Stage</span>
+        </div>
+
+        <div class="project-content">
+          <h3>FinSage</h3>
+          <p>Financial Literacy for Students</p>
+
+          <div class="project-footer">
+            <div class="avatars">
+              <span class="avatar avatar-thirteen"></span>
+              <span class="avatar avatar-fourteen"></span>
+              <span class="avatar avatar-fifteen"></span>
+            </div>
+            <span class="member-count">3 Members</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .idea-section {
+    padding: 30px 0 38px;
+    background: #fffaf4;
+    color: #171d45;
+  }
+
+  .idea-container {
+    width: min(1240px, calc(100% - 3rem));
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 17px;
+  }
+
+  .heading-icon {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffb13b, #ff7b18);
+    font-size: 1.2rem;
+    box-shadow: 0 5px 14px rgba(255, 143, 40, 0.2);
+  }
+
+  h2 {
+    margin: 0 0 3px;
+    font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+
+  .section-heading p {
+    margin: 0;
+    color: #665b70;
+    font-size: 0.78rem;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .project-card {
+    overflow: hidden;
+    border: 1px solid #f0e5d9;
+    border-radius: 9px;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(107, 76, 42, 0.06);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(107, 76, 42, 0.13);
+  }
+
+  .project-image {
+    position: relative;
+    height: 112px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .campuskart-image {
+    background-image:
+      linear-gradient(135deg, rgba(20, 25, 55, 0.1), rgba(30, 15, 45, 0.58)),
+      url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=700&q=85");
+  }
+
+  .learnloop-image {
+    background-image:
+      linear-gradient(135deg, rgba(20, 25, 70, 0.08), rgba(20, 10, 65, 0.6)),
+      url("https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=700&q=85");
+  }
+
+  .arogyal-image {
+    background-image:
+      linear-gradient(135deg, rgba(8, 30, 50, 0.08), rgba(5, 25, 45, 0.62)),
+      url("https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=700&q=85");
+  }
+
+  .travelmate-image {
+    background-image:
+      linear-gradient(135deg, rgba(10, 25, 45, 0.08), rgba(10, 25, 45, 0.5)),
+      url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=85");
+  }
+
+  .finsage-image {
+    background-image:
+      linear-gradient(135deg, rgba(25, 45, 15, 0.08), rgba(20, 35, 10, 0.58)),
+      url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=700&q=85");
+  }
+
+  .status-badge {
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    padding: 5px 10px;
+    border-radius: 14px;
+    background: #ffd477;
+    color: #684400;
+    font-size: 0.58rem;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .project-content {
+    padding: 10px 11px 11px;
+  }
+
+  h3 {
+    margin: 0 0 4px;
+    color: #171d45;
+    font-size: 0.88rem;
+    font-weight: 800;
+  }
+
+  .project-content p {
+    min-height: 28px;
+    margin: 0;
+    color: #756b80;
+    font-size: 0.67rem;
+    line-height: 1.35;
+  }
+
+  .project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .avatars {
+    display: flex;
+    padding-left: 4px;
+  }
+
+  .avatar {
+    width: 22px;
+    height: 22px;
+    margin-left: -4px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .avatar-one {
+    background-image: url("https://randomuser.me/api/portraits/women/44.jpg");
+  }
+
+  .avatar-two {
+    background-image: url("https://randomuser.me/api/portraits/men/32.jpg");
+  }
+
+  .avatar-three {
+    background-image: url("https://randomuser.me/api/portraits/women/65.jpg");
+  }
+
+  .avatar-four {
+    background-image: url("https://randomuser.me/api/portraits/men/41.jpg");
+  }
+
+  .avatar-five {
+    background-image: url("https://randomuser.me/api/portraits/women/32.jpg");
+  }
+
+  .avatar-six {
+    background-image: url("https://randomuser.me/api/portraits/men/52.jpg");
+  }
+
+  .avatar-seven {
+    background-image: url("https://randomuser.me/api/portraits/women/51.jpg");
+  }
+
+  .avatar-eight {
+    background-image: url("https://randomuser.me/api/portraits/men/22.jpg");
+  }
+
+  .avatar-nine {
+    background-image: url("https://randomuser.me/api/portraits/women/25.jpg");
+  }
+
+  .avatar-ten {
+    background-image: url("https://randomuser.me/api/portraits/men/35.jpg");
+  }
+
+  .avatar-eleven {
+    background-image: url("https://randomuser.me/api/portraits/women/48.jpg");
+  }
+
+  .avatar-twelve {
+    background-image: url("https://randomuser.me/api/portraits/men/62.jpg");
+  }
+
+  .avatar-thirteen {
+    background-image: url("https://randomuser.me/api/portraits/women/68.jpg");
+  }
+
+  .avatar-fourteen {
+    background-image: url("https://randomuser.me/api/portraits/men/75.jpg");
+  }
+
+  .avatar-fifteen {
+    background-image: url("https://randomuser.me/api/portraits/women/55.jpg");
+  }
+
+  .member-count {
+    color: #756b80;
+    font-size: 0.62rem;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 1100px) {
+    .project-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 700px) {
+    .idea-container {
+      width: min(100% - 2rem, 1240px);
+    }
+
+    .project-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .project-image {
+      height: 125px;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .project-image {
+      height: 160px;
+    }
+  }
+</style>

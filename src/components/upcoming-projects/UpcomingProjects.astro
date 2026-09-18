@@ -1,0 +1,163 @@
+<section class="upcoming-section" id="upcoming-projects">
+  <div class="upcoming-container">
+    <div class="section-heading">
+      <div class="heading-icon">◷</div>
+
+      <div>
+        <h2>Upcoming Projects</h2>
+        <p>New ideas and opportunities are coming soon.</p>
+      </div>
+    </div>
+
+    <div class="upcoming-grid">
+      <article class="upcoming-card">
+        <div class="coming-icon">🚀</div>
+        <div>
+          <span class="coming-label">COMING SOON</span>
+          <h3>LaunchPad</h3>
+          <p>A platform to help student founders shape and validate their ideas.</p>
+        </div>
+      </article>
+
+      <article class="upcoming-card">
+        <div class="coming-icon">🌐</div>
+        <div>
+          <span class="coming-label">COMING SOON</span>
+          <h3>ConnectHub</h3>
+          <p>A space for students to discover collaborators and build together.</p>
+        </div>
+      </article>
+
+      <article class="upcoming-card">
+        <div class="coming-icon">📚</div>
+        <div>
+          <span class="coming-label">COMING SOON</span>
+          <h3>SkillSphere</h3>
+          <p>A practical learning ecosystem focused on real-world skills.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .upcoming-section {
+    padding: 30px 0 38px;
+    background: #eef5ff;
+    color: #101b43;
+  }
+
+  .upcoming-container {
+    width: min(1240px, calc(100% - 3rem));
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .heading-icon {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #759cff, #5262e8);
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    box-shadow: 0 5px 14px rgba(82, 98, 232, 0.2);
+  }
+
+  h2 {
+    margin: 0 0 3px;
+    font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+
+  .section-heading p {
+    margin: 0;
+    color: #536184;
+    font-size: 0.78rem;
+  }
+
+  .upcoming-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .upcoming-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    min-height: 150px;
+    padding: 20px;
+    border: 1px solid #dce7f7;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(37, 65, 117, 0.05);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .upcoming-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(37, 65, 117, 0.12);
+  }
+
+  .coming-icon {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #eaf0ff;
+    font-size: 1.5rem;
+  }
+
+  .coming-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #536ee8;
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+  h3 {
+    margin: 0 0 8px;
+    color: #111b42;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .upcoming-card p {
+    margin: 0;
+    color: #63708d;
+    font-size: 0.76rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .upcoming-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .upcoming-container {
+      width: min(100% - 2rem, 1240px);
+    }
+
+    .upcoming-card {
+      padding: 16px;
+    }
+  }
+</style>
