@@ -1,0 +1,46 @@
+---
+import Header from "../components/header/header.astro";
+import BenefitsHero from "../components/benefits-hero/BenefitsHero.astro";
+import Footer from "../components/footer/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Benefits | Sintrax Creations</title>
+
+    <meta
+      name="description"
+      content="Discover the practical skills, teamwork, project experience, and growth opportunities available through Sintrax Creations."
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <BenefitsHero />
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  :global(body) {
+    margin: 0;
+    background: #071a2b;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+</style>
