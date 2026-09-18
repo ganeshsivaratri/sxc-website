@@ -1,8 +1,6 @@
-<!-- SXC transparent navigation header -->
+<!-- SXC fixed navigation header -->
 <header class="site-header">
-  <!-- Centers all header content -->
   <div class="header-container">
-
     <!-- SXC logo -->
     <a href="/" class="brand" aria-label="SXC Home">
       <img
@@ -12,7 +10,7 @@
       />
     </a>
 
-    <!-- Primary website navigation -->
+    <!-- Primary navigation -->
     <nav class="main-navigation" aria-label="Main navigation">
       <a href="/" class="nav-link active">Home</a>
       <a href="/projects" class="nav-link">Projects</a>
@@ -20,7 +18,7 @@
       <a href="/join" class="nav-link">Join Now</a>
     </nav>
 
-    <!-- Supporting tagline and main action -->
+    <!-- Header action -->
     <div class="header-actions">
       <p class="tagline">
         Ideas <span>|</span> Skills <span>|</span> People <span>|</span> Real Impact
@@ -31,34 +29,36 @@
         <span aria-hidden="true">↗</span>
       </a>
     </div>
-
   </div>
 </header>
 
 <style>
-  /* Keeps the header above the Hero without adding a background */
+  /* Keeps the header visible while scrolling */
   .site-header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     width: 100%;
-    padding: 1.6rem 0;
-    background: transparent;
+    padding: 1.2rem 0;
+    background: rgba(7, 26, 43, 0.78);
+    border-bottom: 1px solid rgba(24, 213, 232, 0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
   }
 
-  /* Controls the maximum width and alignment of the header */
+  /* Centers and aligns header content */
   .header-container {
-    width: min(1380px, calc(100% - 5rem));
-    min-height: 64px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2.5rem;
+    gap: 2rem;
+    width: min(1380px, calc(100% - 5rem));
+    min-height: 64px;
+    margin: 0 auto;
   }
 
-  /* Controls the logo link */
+  /* Logo link */
   .brand {
     display: inline-flex;
     flex-shrink: 0;
@@ -66,7 +66,7 @@
     text-decoration: none;
   }
 
-  /* Controls the SXC logo image */
+  /* Logo image */
   .brand-logo {
     display: block;
     width: 126px;
@@ -76,12 +76,11 @@
     transition: transform 0.25s ease;
   }
 
-  /* Adds a subtle logo interaction */
   .brand:hover .brand-logo {
     transform: scale(1.03);
   }
 
-  /* Places the navigation links in one row */
+  /* Navigation layout */
   .main-navigation {
     display: flex;
     align-items: center;
@@ -89,7 +88,7 @@
     gap: 2.25rem;
   }
 
-  /* Styles the navigation links */
+  /* Navigation links */
   .nav-link {
     position: relative;
     padding: 0.65rem 0;
@@ -102,7 +101,7 @@
     transition: color 0.25s ease;
   }
 
-  /* Creates the animated navigation indicator */
+  /* Navigation underline */
   .nav-link::after {
     position: absolute;
     right: 0;
@@ -117,26 +116,24 @@
     transition: transform 0.25s ease;
   }
 
-  /* Highlights the active and hovered links */
   .nav-link:hover,
   .nav-link.active {
     color: #ffffff;
   }
 
-  /* Displays the active-link underline */
   .nav-link:hover::after,
   .nav-link.active::after {
     transform: scaleX(1);
   }
 
-  /* Aligns the tagline and Join button */
+  /* Header action area */
   .header-actions {
     display: flex;
     align-items: center;
-    gap: 1.75rem;
+    gap: 1.5rem;
   }
 
-  /* Styles the supporting tagline */
+  /* Tagline */
   .tagline {
     margin: 0;
     color: rgba(255, 255, 255, 0.7);
@@ -146,13 +143,12 @@
     white-space: nowrap;
   }
 
-  /* Highlights the tagline separators */
   .tagline span {
     margin: 0 0.3rem;
     color: #18d5e8;
   }
 
-  /* Styles the primary Join button */
+  /* Join button */
   .join-button {
     display: inline-flex;
     align-items: center;
@@ -175,19 +171,17 @@
       box-shadow 0.25s ease;
   }
 
-  /* Styles the button arrow */
   .join-button span {
     font-size: 1.05rem;
     line-height: 1;
   }
 
-  /* Adds a subtle hover animation */
   .join-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 30px rgba(24, 213, 232, 0.35);
   }
 
-  /* Reduces header spacing on smaller desktop screens */
+  /* Smaller desktop screens */
   @media (max-width: 1200px) {
     .header-container {
       width: min(1380px, calc(100% - 3rem));
@@ -203,10 +197,9 @@
     }
   }
 
-  /* Adjusts the header for tablets */
+  /* Tablet layout */
   @media (max-width: 800px) {
     .header-container {
-      min-height: auto;
       flex-wrap: wrap;
     }
 
@@ -222,7 +215,7 @@
     }
   }
 
-  /* Adjusts the header for mobile devices */
+  /* Mobile layout */
   @media (max-width: 500px) {
     .site-header {
       padding: 1rem 0;

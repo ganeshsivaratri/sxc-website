@@ -1,6 +1,7 @@
 ---
-/* Import the reusable SXC Header component */
-import Header from "../components/header/Header.astro";
+/* Import reusable SXC components */
+import Header from "../components/header/header.astro";
+import Hero from "../components/hero/Hero.astro";
 ---
 
 <!doctype html>
@@ -9,10 +10,10 @@ import Header from "../components/header/Header.astro";
     <!-- Basic character encoding -->
     <meta charset="UTF-8" />
 
-    <!-- Makes the layout responsive on mobile devices -->
+    <!-- Responsive layout -->
     <meta name="viewport" content="width=device-width" />
 
-    <!-- Homepage description for search engines -->
+    <!-- Search engine description -->
     <meta
       name="description"
       content="SintraX Creations — Where students build real products and startup ideas."
@@ -23,35 +24,26 @@ import Header from "../components/header/Header.astro";
   </head>
 
   <body>
-    <!-- Transparent header displayed over the page background -->
+    <!-- Header displayed over the homepage -->
     <Header />
 
-    <!-- Temporary homepage content -->
+    <!-- Homepage sections -->
     <main>
-      <h1>SXC Home Page</h1>
+      <Hero />
     </main>
   </body>
 </html>
 
 <style>
-  /* Makes width and height calculations more predictable */
   :global(*) {
     box-sizing: border-box;
   }
 
-  /* Sets the temporary dark background behind the header */
   :global(body) {
     min-height: 100vh;
     margin: 0;
     background: #071a2b;
     color: #ffffff;
     font-family: Arial, sans-serif;
-  }
-
-  /* Temporary heading used until we build the Hero section */
-  h1 {
-    margin: 0;
-    padding: 220px 5% 100px;
-    font-size: 3rem;
   }
 </style>
