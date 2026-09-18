@@ -1,0 +1,546 @@
+<section class="projects-hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-container">
+    <div class="hero-content">
+      <span class="hero-label">STUDENT PROJECTS</span>
+
+      <h1>
+        Real Projects.<br />
+        Real People.<br />
+        <span>Real Impact.</span>
+      </h1>
+
+      <p>
+        Explore what students are building, discover meaningful ideas,
+        and find opportunities to become part of something real.
+      </p>
+
+      <div class="hero-actions">
+        <a href="/#join" class="primary-button">
+          Join SXC <span>↗</span>
+        </a>
+
+        <a href="#ongoing-projects" class="secondary-button">
+          Explore Projects <span>↓</span>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <strong>50<span>+</span></strong>
+          <small>Projects</small>
+        </div>
+
+        <div class="stat-item">
+          <strong>300<span>+</span></strong>
+          <small>Student Builders</small>
+        </div>
+
+        <div class="stat-item">
+          <strong>12<span>+</span></strong>
+          <small>Domains</small>
+        </div>
+
+        <div class="stat-item">
+          <strong>∞</strong>
+          <small>Possibilities</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-label="Students collaborating on projects">
+      <div class="visual-glow"></div>
+
+      <div class="visual-card main-card">
+        <div class="card-top">
+          <span class="status-dot"></span>
+          <span>SXC PROJECT WORKSPACE</span>
+          <span class="live-label">LIVE</span>
+        </div>
+
+        <div class="workspace-content">
+          <div class="workspace-sidebar">
+            <span class="sidebar-line active"></span>
+            <span class="sidebar-line"></span>
+            <span class="sidebar-line"></span>
+            <span class="sidebar-line"></span>
+          </div>
+
+          <div class="workspace-main">
+            <span class="mini-label">CURRENT FOCUS</span>
+            <h2>Build. Collaborate. Create.</h2>
+
+            <div class="progress-row">
+              <span>Project Progress</span>
+              <strong>72%</strong>
+            </div>
+
+            <div class="progress-bar">
+              <span></span>
+            </div>
+
+            <div class="workspace-boxes">
+              <div>
+                <strong>06</strong>
+                <small>Team Members</small>
+              </div>
+
+              <div>
+                <strong>14</strong>
+                <small>Tasks Completed</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="floating-card floating-top">
+        <span>✦</span>
+        <div>
+          <strong>Real Collaboration</strong>
+          <small>Students building together</small>
+        </div>
+      </div>
+
+      <div class="floating-card floating-bottom">
+        <span>↗</span>
+        <div>
+          <strong>Real Impact</strong>
+          <small>Ideas becoming products</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-bottom-line"></div>
+</section>
+
+<style>
+  .projects-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 700px;
+    padding: 150px 6% 70px;
+    background:
+      radial-gradient(
+        circle at 78% 35%,
+        rgba(0, 188, 255, 0.16),
+        transparent 30%
+      ),
+      linear-gradient(115deg, #04121f 0%, #071c2d 55%, #09283a 100%);
+    color: #ffffff;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(4, 18, 31, 0.95) 0%,
+        rgba(4, 18, 31, 0.78) 45%,
+        rgba(4, 18, 31, 0.2) 100%
+      );
+    pointer-events: none;
+  }
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-label {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #4de4ff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+  }
+
+  .hero-content h1 {
+    max-width: 700px;
+    margin: 0;
+    font-size: clamp(3rem, 5.3vw, 5.5rem);
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    text-transform: uppercase;
+  }
+
+  .hero-content h1 span {
+    color: #4de4ff;
+  }
+
+  .hero-content p {
+    max-width: 500px;
+    margin: 28px 0 0;
+    color: #a2bac8;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 14px 23px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      transform 0.25s ease,
+      background 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .primary-button {
+    background: #4de4ff;
+    color: #04121f;
+  }
+
+  .primary-button:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+  }
+
+  .secondary-button {
+    border: 1px solid rgba(77, 228, 255, 0.5);
+    color: #ffffff;
+  }
+
+  .secondary-button:hover {
+    border-color: #4de4ff;
+    background: rgba(77, 228, 255, 0.1);
+    transform: translateY(-3px);
+  }
+
+  .hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 55px;
+  }
+
+  .stat-item {
+    min-width: 115px;
+    padding: 0 25px;
+    border-left: 1px solid rgba(77, 228, 255, 0.4);
+  }
+
+  .stat-item:first-child {
+    padding-left: 0;
+  }
+
+  .stat-item strong {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .stat-item strong span {
+    color: #4de4ff;
+  }
+
+  .stat-item small {
+    display: block;
+    margin-top: 9px;
+    color: #91aab9;
+    font-size: 0.78rem;
+  }
+
+  .hero-visual {
+    position: relative;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .visual-glow {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: rgba(0, 201, 255, 0.12);
+    filter: blur(70px);
+  }
+
+  .visual-card {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 520px);
+    border: 1px solid rgba(77, 228, 255, 0.28);
+    border-radius: 18px;
+    background: rgba(8, 31, 47, 0.9);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(14px);
+  }
+
+  .card-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 17px 20px;
+    border-bottom: 1px solid rgba(145, 170, 185, 0.15);
+    color: #91aab9;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4de4ff;
+    box-shadow: 0 0 14px rgba(77, 228, 255, 0.8);
+  }
+
+  .live-label {
+    margin-left: auto;
+    color: #4de4ff;
+  }
+
+  .workspace-content {
+    display: flex;
+    min-height: 310px;
+  }
+
+  .workspace-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 75px;
+    padding: 28px 20px;
+    border-right: 1px solid rgba(145, 170, 185, 0.12);
+  }
+
+  .sidebar-line {
+    display: block;
+    width: 30px;
+    height: 8px;
+    border-radius: 5px;
+    background: #234254;
+  }
+
+  .sidebar-line.active {
+    background: #4de4ff;
+  }
+
+  .workspace-main {
+    flex: 1;
+    padding: 35px 28px;
+  }
+
+  .mini-label {
+    color: #4de4ff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+  }
+
+  .workspace-main h2 {
+    max-width: 300px;
+    margin: 15px 0 35px;
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    line-height: 1.1;
+  }
+
+  .progress-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #91aab9;
+    font-size: 0.75rem;
+  }
+
+  .progress-row strong {
+    color: #4de4ff;
+  }
+
+  .progress-bar {
+    height: 8px;
+    margin-top: 12px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #19394b;
+  }
+
+  .progress-bar span {
+    display: block;
+    width: 72%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #4de4ff, #168be9);
+  }
+
+  .workspace-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 35px;
+  }
+
+  .workspace-boxes div {
+    padding: 17px;
+    border: 1px solid rgba(77, 228, 255, 0.14);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.025);
+  }
+
+  .workspace-boxes strong,
+  .workspace-boxes small {
+    display: block;
+  }
+
+  .workspace-boxes strong {
+    font-size: 1.5rem;
+  }
+
+  .workspace-boxes small {
+    margin-top: 7px;
+    color: #91aab9;
+    font-size: 0.7rem;
+  }
+
+  .floating-card {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 17px;
+    border: 1px solid rgba(77, 228, 255, 0.25);
+    border-radius: 12px;
+    background: rgba(5, 24, 38, 0.95);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  }
+
+  .floating-card > span {
+    color: #4de4ff;
+    font-size: 1.3rem;
+  }
+
+  .floating-card strong,
+  .floating-card small {
+    display: block;
+  }
+
+  .floating-card strong {
+    font-size: 0.78rem;
+  }
+
+  .floating-card small {
+    margin-top: 5px;
+    color: #91aab9;
+    font-size: 0.65rem;
+  }
+
+  .floating-top {
+    top: 15px;
+    right: -10px;
+  }
+
+  .floating-bottom {
+    bottom: 15px;
+    left: -15px;
+  }
+
+  .hero-bottom-line {
+    position: absolute;
+    right: 6%;
+    bottom: 0;
+    left: 6%;
+    height: 1px;
+    background: rgba(77, 228, 255, 0.15);
+  }
+
+  @media (max-width: 1050px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .hero-visual {
+      max-width: 650px;
+      width: 100%;
+      margin: 20px auto 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .projects-hero {
+      padding: 120px 5% 55px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.7rem, 12vw, 4.2rem);
+    }
+
+    .hero-stats {
+      gap: 25px 0;
+    }
+
+    .stat-item {
+      min-width: 50%;
+      padding: 0 15px;
+    }
+
+    .stat-item:nth-child(3) {
+      padding-left: 0;
+    }
+
+    .hero-visual {
+      min-height: 350px;
+    }
+
+    .workspace-sidebar {
+      width: 45px;
+      padding: 25px 10px;
+    }
+
+    .workspace-main {
+      padding: 25px 18px;
+    }
+
+    .floating-card {
+      padding: 10px;
+    }
+
+    .floating-top {
+      right: 0;
+    }
+
+    .floating-bottom {
+      bottom: 0;
+      left: 0;
+    }
+  }
+</style>

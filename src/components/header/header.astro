@@ -1,3 +1,7 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
 <!-- SXC fixed navigation header -->
 <header class="site-header">
   <div class="header-container">
@@ -12,16 +16,43 @@
 
     <!-- Primary navigation -->
     <nav class="main-navigation" aria-label="Main navigation">
-      <a href="/" class="nav-link active">Home</a>
-      <a href="/projects" class="nav-link">Projects</a>
-      <a href="/how-it-works" class="nav-link">How It Works</a>
-      <a href="/join" class="nav-link">Join Now</a>
+      <a
+        href="/"
+        class:list={["nav-link", { active: currentPath === "/" }]}
+      >
+        Home
+      </a>
+
+      <a
+        href="/projects"
+        class:list={["nav-link", { active: currentPath === "/projects" }]}
+      >
+        Projects
+      </a>
+
+      <a
+        href="/how-it-works"
+        class:list={[
+          "nav-link",
+          { active: currentPath === "/how-it-works" },
+        ]}
+      >
+        How It Works
+      </a>
+
+      <a
+        href="/join"
+        class:list={["nav-link", { active: currentPath === "/join" }]}
+      >
+        Join Now
+      </a>
     </nav>
 
     <!-- Header action -->
     <div class="header-actions">
       <p class="tagline">
-        Ideas <span>|</span> Skills <span>|</span> People <span>|</span> Real Impact
+        Ideas <span>|</span> Skills <span>|</span> People <span>|</span> Real
+        Impact
       </p>
 
       <a href="/join" class="join-button">
@@ -33,7 +64,7 @@
 </header>
 
 <style>
-  /* Keeps the header visible while scrolling */
+  /* Fixed navigation header */
   .site-header {
     position: fixed;
     top: 0;
@@ -41,13 +72,13 @@
     z-index: 1000;
     width: 100%;
     padding: 1.2rem 0;
-    background: rgba(7, 26, 43, 0.78);
+    background: rgba(7, 26, 43, 0.88);
     border-bottom: 1px solid rgba(24, 213, 232, 0.12);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
   }
 
-  /* Centers and aligns header content */
+  /* Header container */
   .header-container {
     display: flex;
     align-items: center;
@@ -58,7 +89,7 @@
     margin: 0 auto;
   }
 
-  /* Logo link */
+  /* Logo */
   .brand {
     display: inline-flex;
     flex-shrink: 0;
@@ -66,7 +97,6 @@
     text-decoration: none;
   }
 
-  /* Logo image */
   .brand-logo {
     display: block;
     width: 126px;
@@ -80,7 +110,7 @@
     transform: scale(1.03);
   }
 
-  /* Navigation layout */
+  /* Navigation */
   .main-navigation {
     display: flex;
     align-items: center;
@@ -88,12 +118,11 @@
     gap: 2.25rem;
   }
 
-  /* Navigation links */
   .nav-link {
     position: relative;
     padding: 0.65rem 0;
     color: rgba(255, 255, 255, 0.72);
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.82rem;
     font-weight: 600;
     text-decoration: none;
@@ -126,7 +155,7 @@
     transform: scaleX(1);
   }
 
-  /* Header action area */
+  /* Header actions */
   .header-actions {
     display: flex;
     align-items: center;
@@ -137,7 +166,7 @@
   .tagline {
     margin: 0;
     color: rgba(255, 255, 255, 0.7);
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.75rem;
     font-weight: 500;
     white-space: nowrap;
@@ -160,7 +189,7 @@
     border-radius: 999px;
     background: linear-gradient(135deg, #18d5e8, #2f80ed);
     color: #071a2b;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8rem;
     font-weight: 800;
     text-decoration: none;
