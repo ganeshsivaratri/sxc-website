@@ -1,0 +1,291 @@
+<section class="work-count" id="make-work-count">
+  <div class="work-count-container">
+    <div class="work-count-content">
+      <div class="section-label">
+        <span>04</span>
+        MAKE YOUR WORK COUNT
+      </div>
+
+      <h2>
+        A meaningful
+        <span>project experience.</span>
+      </h2>
+
+      <p>
+        Clearly communicate what you worked on, what you contributed,
+        and the impact you made.
+      </p>
+
+      <a href="/projects" class="work-button">
+        View Projects
+        <span>↗</span>
+      </a>
+    </div>
+
+    <div class="record-card">
+      <div class="record-header">
+        <h3>Your Project Record</h3>
+
+        <span class="verified-status">
+          <i></i>
+          Verified workflow
+        </span>
+      </div>
+
+      <div class="record-list">
+        <div class="record-item">
+          <span class="record-number">01</span>
+          <p>A practical project experience</p>
+          <span class="record-arrow">↗</span>
+        </div>
+
+        <div class="record-item">
+          <span class="record-number">02</span>
+          <p>A clearer understanding of your role</p>
+          <span class="record-arrow">↗</span>
+        </div>
+
+        <div class="record-item">
+          <span class="record-number">03</span>
+          <p>Project work for your portfolio</p>
+          <span class="record-arrow">↗</span>
+        </div>
+
+        <div class="record-item">
+          <span class="record-number">04</span>
+          <p>A chance to present your contribution</p>
+          <span class="record-arrow">↗</span>
+        </div>
+
+        <div class="record-item">
+          <span class="record-number">05</span>
+          <p>Exposure to collaborative workflows</p>
+          <span class="record-arrow">↗</span>
+        </div>
+
+        <div class="record-item">
+          <span class="record-number">06</span>
+          <p>An SXC certificate after meeting requirements</p>
+          <span class="record-arrow">↗</span>
+        </div>
+
+        <div class="record-item">
+          <span class="record-number">07</span>
+          <p>A live project link when available</p>
+          <span class="record-arrow">↗</span>
+        </div>
+
+        <div class="record-item">
+          <span class="record-number">08</span>
+          <p>Connections with like-minded students</p>
+          <span class="record-arrow">↗</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .work-count {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 5% 90px;
+    background:
+      radial-gradient(
+        circle at 90% 100%,
+        rgba(24, 213, 232, 0.09),
+        transparent 30%
+      ),
+      #081923;
+    color: #ffffff;
+  }
+
+  .work-count-container {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 65px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #18d5e8;
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+  }
+
+  .section-label span {
+    color: #ffffff;
+  }
+
+  .work-count-content h2 {
+    margin: 25px 0 18px;
+    font-size: clamp(2.1rem, 3.5vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.055em;
+  }
+
+  .work-count-content h2 span {
+    display: block;
+    color: #18d5e8;
+  }
+
+  .work-count-content p {
+    max-width: 320px;
+    margin: 0;
+    color: #9bb0bd;
+    font-size: 0.76rem;
+    line-height: 1.7;
+  }
+
+  .work-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 28px;
+    padding: 12px 17px;
+    border: 1px solid #18d5e8;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .work-button:hover {
+    background: #18d5e8;
+    color: #071a2b;
+    transform: translateY(-3px);
+  }
+
+  .record-card {
+    overflow: hidden;
+    padding: 18px 20px;
+    border: 1px solid rgba(142, 174, 191, 0.18);
+    border-radius: 10px;
+    background: rgba(12, 34, 48, 0.75);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.18);
+  }
+
+  .record-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgba(142, 174, 191, 0.15);
+  }
+
+  .record-header h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 0.75rem;
+  }
+
+  .verified-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #27d17f;
+    font-size: 0.55rem;
+    white-space: nowrap;
+  }
+
+  .verified-status i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #27d17f;
+  }
+
+  .record-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .record-item {
+    display: grid;
+    grid-template-columns: 28px 1fr 15px;
+    align-items: center;
+    gap: 10px;
+    min-height: 35px;
+    border-bottom: 1px solid rgba(142, 174, 191, 0.1);
+  }
+
+  .record-item:last-child {
+    border-bottom: 0;
+  }
+
+  .record-number {
+    color: #18d5e8;
+    font-size: 0.59rem;
+    font-weight: 700;
+  }
+
+  .record-item p {
+    margin: 0;
+    color: #9cb2c0;
+    font-size: 0.59rem;
+  }
+
+  .record-arrow {
+    color: #18d5e8;
+    font-size: 0.75rem;
+    text-align: right;
+  }
+
+  @media (max-width: 850px) {
+    .work-count-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .work-count-content p {
+      max-width: 450px;
+    }
+
+    .record-card {
+      max-width: 700px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .work-count {
+      padding: 70px 6px 75px;
+    }
+
+    .work-count-content {
+      padding: 0 5%;
+    }
+
+    .record-card {
+      padding: 15px;
+    }
+
+    .record-header {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .record-item {
+      grid-template-columns: 25px 1fr 12px;
+      gap: 8px;
+    }
+
+    .record-item p {
+      font-size: 0.58rem;
+      line-height: 1.4;
+    }
+  }
+</style>

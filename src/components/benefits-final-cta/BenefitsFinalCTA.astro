@@ -1,0 +1,281 @@
+<section class="benefits-final-cta">
+  <div class="cta-background"></div>
+
+  <div class="cta-content">
+    <span class="eyebrow">START YOUR JOURNEY</span>
+
+    <h2>
+      Your next project
+      <span>could start here.</span>
+    </h2>
+
+    <p>
+      Learn with others, contribute to meaningful work, and build
+      experience through action.
+    </p>
+
+    <div class="cta-actions">
+      <a href="/join" class="primary-btn">
+        Join SXC
+        <span>↗</span>
+      </a>
+
+      <a href="/projects" class="secondary-btn">
+        Explore Projects
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="floating-note">
+    <span class="note-label">SXC COMMUNITY</span>
+    <strong>Build Together.</strong>
+    <strong>Grow Together.</strong>
+    <small>Ideas become real projects.</small>
+  </div>
+</section>
+
+<style>
+  .benefits-final-cta {
+    position: relative;
+    isolation: isolate;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 90px 8%;
+    overflow: hidden;
+    background: #eaf3fc;
+  }
+
+  .cta-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 62%;
+    z-index: -1;
+
+    background-image: url("/images/sxc-hero.png");
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.45) 15%,
+      #000000 35%
+    );
+
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.45) 15%,
+      #000000 35%
+    );
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 2;
+    width: min(620px, 100%);
+  }
+
+  .eyebrow {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #168bd0;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+  }
+
+  h2 {
+    margin: 0;
+    color: #071a2b;
+    font-size: clamp(42px, 5vw, 70px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+  }
+
+  h2 span {
+    display: block;
+    color: #168bd0;
+  }
+
+  p {
+    max-width: 520px;
+    margin: 25px 0 32px;
+    color: #34536b;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    min-width: 145px;
+    padding: 15px 21px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .primary-btn {
+    color: #ffffff;
+    background: linear-gradient(135deg, #18d5e8, #2f80ed);
+    box-shadow: 0 10px 25px rgba(47, 128, 237, 0.25);
+  }
+
+  .secondary-btn {
+    color: #071a2b;
+    border: 1px solid rgba(7, 26, 43, 0.25);
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .primary-btn span,
+  .secondary-btn span {
+    font-size: 18px;
+  }
+
+  .primary-btn:hover,
+  .secondary-btn:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Community message card */
+  .floating-note {
+    position: absolute;
+    top: 42px;
+    right: 7%;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+
+    min-width: 245px;
+    padding: 22px 26px;
+
+    border: 1px solid rgba(24, 213, 232, 0.65);
+    border-radius: 18px;
+
+    background: rgba(7, 26, 43, 0.9);
+    box-shadow:
+      0 15px 45px rgba(0, 0, 0, 0.3),
+      0 0 25px rgba(24, 213, 232, 0.12);
+
+    backdrop-filter: blur(10px);
+    transform: rotate(-2deg);
+  }
+
+  .note-label {
+    margin-bottom: 8px;
+    color: #18d5e8;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+  .floating-note strong {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.15;
+  }
+
+  .floating-note small {
+    margin-top: 10px;
+    color: #a8c4d8;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 900px) {
+    .benefits-final-cta {
+      padding: 100px 7% 80px;
+    }
+
+    .cta-background {
+      width: 58%;
+      background-position: center right;
+    }
+
+    .floating-note {
+      top: 24px;
+      right: 24px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .benefits-final-cta {
+      min-height: 600px;
+      align-items: flex-end;
+      padding: 250px 24px 70px;
+    }
+
+    .cta-background {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 330px;
+
+      background-position: center top;
+
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        #000000 0%,
+        rgba(0, 0, 0, 0.65) 60%,
+        transparent 100%
+      );
+
+      mask-image: linear-gradient(
+        to bottom,
+        #000000 0%,
+        rgba(0, 0, 0, 0.65) 60%,
+        transparent 100%
+      );
+    }
+
+    h2 {
+      font-size: 43px;
+      letter-spacing: -1.5px;
+    }
+
+    p {
+      margin: 22px 0 28px;
+      font-size: 14px;
+    }
+
+    .floating-note {
+      top: 20px;
+      right: 20px;
+      min-width: auto;
+      padding: 16px 18px;
+    }
+
+    .floating-note strong {
+      font-size: 16px;
+    }
+
+    .floating-note small {
+      font-size: 10px;
+    }
+  }
+</style>
