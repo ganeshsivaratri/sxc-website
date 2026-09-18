@@ -1,0 +1,253 @@
+<!-- SXC transparent navigation header -->
+<header class="site-header">
+  <!-- Centers all header content -->
+  <div class="header-container">
+
+    <!-- SXC logo -->
+    <a href="/" class="brand" aria-label="SXC Home">
+      <img
+        src="/images/sxc-logo.png"
+        alt="SXC — SintraX Creations"
+        class="brand-logo"
+      />
+    </a>
+
+    <!-- Primary website navigation -->
+    <nav class="main-navigation" aria-label="Main navigation">
+      <a href="/" class="nav-link active">Home</a>
+      <a href="/projects" class="nav-link">Projects</a>
+      <a href="/how-it-works" class="nav-link">How It Works</a>
+      <a href="/join" class="nav-link">Join Now</a>
+    </nav>
+
+    <!-- Supporting tagline and main action -->
+    <div class="header-actions">
+      <p class="tagline">
+        Ideas <span>|</span> Skills <span>|</span> People <span>|</span> Real Impact
+      </p>
+
+      <a href="/join" class="join-button">
+        Join SXC
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<style>
+  /* Keeps the header above the Hero without adding a background */
+  .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 1.6rem 0;
+    background: transparent;
+  }
+
+  /* Controls the maximum width and alignment of the header */
+  .header-container {
+    width: min(1380px, calc(100% - 5rem));
+    min-height: 64px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+
+  /* Controls the logo link */
+  .brand {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  /* Controls the SXC logo image */
+  .brand-logo {
+    display: block;
+    width: 126px;
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: screen;
+    transition: transform 0.25s ease;
+  }
+
+  /* Adds a subtle logo interaction */
+  .brand:hover .brand-logo {
+    transform: scale(1.03);
+  }
+
+  /* Places the navigation links in one row */
+  .main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.25rem;
+  }
+
+  /* Styles the navigation links */
+  .nav-link {
+    position: relative;
+    padding: 0.65rem 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-family: Arial, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+  }
+
+  /* Creates the animated navigation indicator */
+  .nav-link::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    border-radius: 10px;
+    background: #18d5e8;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+  }
+
+  /* Highlights the active and hovered links */
+  .nav-link:hover,
+  .nav-link.active {
+    color: #ffffff;
+  }
+
+  /* Displays the active-link underline */
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    transform: scaleX(1);
+  }
+
+  /* Aligns the tagline and Join button */
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  /* Styles the supporting tagline */
+  .tagline {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  /* Highlights the tagline separators */
+  .tagline span {
+    margin: 0 0.3rem;
+    color: #18d5e8;
+  }
+
+  /* Styles the primary Join button */
+  .join-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    min-width: 124px;
+    padding: 0.85rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    background: linear-gradient(135deg, #18d5e8, #2f80ed);
+    color: #071a2b;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 8px 24px rgba(24, 213, 232, 0.18);
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  /* Styles the button arrow */
+  .join-button span {
+    font-size: 1.05rem;
+    line-height: 1;
+  }
+
+  /* Adds a subtle hover animation */
+  .join-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(24, 213, 232, 0.35);
+  }
+
+  /* Reduces header spacing on smaller desktop screens */
+  @media (max-width: 1200px) {
+    .header-container {
+      width: min(1380px, calc(100% - 3rem));
+      gap: 1.5rem;
+    }
+
+    .main-navigation {
+      gap: 1.35rem;
+    }
+
+    .tagline {
+      display: none;
+    }
+  }
+
+  /* Adjusts the header for tablets */
+  @media (max-width: 800px) {
+    .header-container {
+      min-height: auto;
+      flex-wrap: wrap;
+    }
+
+    .main-navigation {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      gap: 1.25rem;
+    }
+
+    .header-actions {
+      margin-left: auto;
+    }
+  }
+
+  /* Adjusts the header for mobile devices */
+  @media (max-width: 500px) {
+    .site-header {
+      padding: 1rem 0;
+    }
+
+    .header-container {
+      width: calc(100% - 2rem);
+    }
+
+    .brand-logo {
+      width: 105px;
+    }
+
+    .main-navigation {
+      gap: 0.85rem;
+    }
+
+    .nav-link {
+      font-size: 0.7rem;
+    }
+
+    .join-button {
+      min-width: auto;
+      padding: 0.7rem 0.9rem;
+      font-size: 0.72rem;
+    }
+  }
+</style>

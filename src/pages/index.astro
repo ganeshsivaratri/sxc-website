@@ -1,17 +1,57 @@
 ---
-
+/* Import the reusable SXC Header component */
+import Header from "../components/header/Header.astro";
 ---
 
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <!-- Basic character encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- Makes the layout responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Homepage description for search engines -->
+    <meta
+      name="description"
+      content="SintraX Creations — Where students build real products and startup ideas."
+    />
+
+    <!-- Browser tab title -->
+    <title>SXC | SintraX Creations</title>
+  </head>
+
+  <body>
+    <!-- Transparent header displayed over the page background -->
+    <Header />
+
+    <!-- Temporary homepage content -->
+    <main>
+      <h1>SXC Home Page</h1>
+    </main>
+  </body>
 </html>
+
+<style>
+  /* Makes width and height calculations more predictable */
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  /* Sets the temporary dark background behind the header */
+  :global(body) {
+    min-height: 100vh;
+    margin: 0;
+    background: #071a2b;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Temporary heading used until we build the Hero section */
+  h1 {
+    margin: 0;
+    padding: 220px 5% 100px;
+    font-size: 3rem;
+  }
+</style>
