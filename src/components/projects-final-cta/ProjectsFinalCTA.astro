@@ -1,0 +1,193 @@
+<section class="projects-final-cta">
+  <div class="cta-glow glow-one"></div>
+  <div class="cta-glow glow-two"></div>
+
+  <div class="cta-content">
+    <span class="cta-label">YOUR NEXT STEP STARTS HERE</span>
+
+    <h2>
+      Have an Idea?<br />
+      <span>Let’s Build It Together.</span>
+    </h2>
+
+    <p>
+      Join a team, explore meaningful projects, and turn your ideas into
+      practical digital products with Sintrax Creations.
+    </p>
+
+    <div class="cta-actions">
+      <a href="/#join" class="primary-button">Join SXC <span>↗</span></a>
+      <a href="mailto:sintraxcreations@gmail.com" class="secondary-button">
+        Contact Us <span>↗</span>
+      </a>
+    </div>
+
+    <div class="cta-note">
+      <span class="note-dot"></span>
+      Build skills. Create impact.
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects-final-cta {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 110px 24px;
+    background: #071a2b;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  .cta-label {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #18d5e8;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    line-height: 1.08;
+    letter-spacing: -0.05em;
+  }
+
+  h2 span {
+    color: #18d5e8;
+  }
+
+  p {
+    max-width: 650px;
+    margin: 28px auto 0;
+    color: #b8cbd9;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .cta-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 38px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    min-width: 160px;
+    padding: 15px 24px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      transform 0.25s ease,
+      background 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .primary-button {
+    background: #18d5e8;
+    color: #071a2b;
+  }
+
+  .secondary-button {
+    border: 1px solid rgba(184, 203, 217, 0.35);
+    color: #ffffff;
+  }
+
+  .primary-button:hover,
+  .secondary-button:hover {
+    transform: translateY(-3px);
+  }
+
+  .primary-button:hover {
+    background: #ffffff;
+  }
+
+  .secondary-button:hover {
+    border-color: #18d5e8;
+    color: #18d5e8;
+  }
+
+  .cta-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 32px;
+    color: #8fa8ba;
+    font-size: 0.85rem;
+  }
+
+  .note-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #27d17f;
+    box-shadow: 0 0 14px rgba(39, 209, 127, 0.7);
+  }
+
+  .cta-glow {
+    position: absolute;
+    z-index: 1;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    opacity: 0.2;
+  }
+
+  .glow-one {
+    top: -240px;
+    left: -140px;
+    background: #18d5e8;
+  }
+
+  .glow-two {
+    right: -160px;
+    bottom: -260px;
+    background: #7c4dff;
+  }
+
+  @media (max-width: 600px) {
+    .projects-final-cta {
+      padding: 80px 20px;
+    }
+
+    .cta-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.13em;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .primary-button,
+    .secondary-button {
+      width: 100%;
+    }
+  }
+</style>
