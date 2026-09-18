@@ -1,0 +1,138 @@
+<section class="how-it-works" id="how-it-works">
+  <div class="section-heading">
+    <span class="eyebrow">HOW SXC WORKS</span>
+
+    <h2>
+      Join. Build.<br />
+      Gain Experience.
+    </h2>
+
+    <p>
+      Follow a simple journey from becoming an SXC member to building real
+      projects with a team.
+    </p>
+  </div>
+
+  <div class="steps-grid">
+    <article class="step-card">
+      <span class="step-number">01</span>
+      <h3>Join</h3>
+      <p>
+        Become an SXC member and explore available startup projects.
+      </p>
+    </article>
+
+    <article class="step-card">
+      <span class="step-number">02</span>
+      <h3>Get Selected</h3>
+      <p>
+        Choose a project that interests you and become part of its team.
+      </p>
+    </article>
+
+    <article class="step-card">
+      <span class="step-number">03</span>
+      <h3>Build</h3>
+      <p>
+        Work with your team to develop the project and solve real problems.
+      </p>
+    </article>
+
+    <article class="step-card">
+      <span class="step-number">04</span>
+      <h3>Get Certified</h3>
+      <p>
+        Complete your project, receive your SXC certificate, and showcase your
+        experience on LinkedIn.
+      </p>
+    </article>
+  </div>
+</section>
+
+<style>
+  .how-it-works {
+    padding: 120px 6%;
+    background: #081f33;
+    color: #ffffff;
+  }
+
+  .section-heading {
+    max-width: 760px;
+    margin-bottom: 55px;
+  }
+
+  .eyebrow {
+    color: #4de4ff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+  }
+
+  h2 {
+    margin: 18px 0;
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+
+  .section-heading p {
+    max-width: 650px;
+    color: #a8bac9;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .step-card {
+    min-height: 245px;
+    padding: 30px;
+    border: 1px solid rgba(77, 228, 255, 0.18);
+    border-radius: 20px;
+    background: rgba(7, 26, 43, 0.65);
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .step-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(77, 228, 255, 0.7);
+  }
+
+  .step-number {
+    color: #4de4ff;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    margin: 55px 0 18px;
+    font-size: 1.35rem;
+  }
+
+  .step-card p {
+    color: #a8bac9;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1000px) {
+    .steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .how-it-works {
+      padding: 80px 6%;
+    }
+
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

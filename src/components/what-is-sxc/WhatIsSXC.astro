@@ -1,0 +1,137 @@
+<section class="what-is-sxc" id="what-is-sxc">
+  <div class="section-heading">
+    <span class="eyebrow">WHAT IS SXC?</span>
+
+    <h2>
+      Build With Startups.<br />
+      Create Real Products.
+    </h2>
+
+    <p>
+      SintraX Creations is a student-powered environment where members work
+      with startup teams, contribute to real projects, and gain practical
+      product-building experience.
+    </p>
+  </div>
+
+  <div class="info-grid">
+    <article class="info-card">
+      <span class="number">01</span>
+      <h3>Startup Teams</h3>
+      <p>
+        Become part of a team working on a startup idea and help develop its
+        product.
+      </p>
+    </article>
+
+    <article class="info-card">
+      <span class="number">02</span>
+      <h3>Real Projects</h3>
+      <p>
+        Work on projects initiated by SXC or proposed by its members.
+      </p>
+    </article>
+
+    <article class="info-card">
+      <span class="number">03</span>
+      <h3>Team Contribution</h3>
+      <p>
+        Take responsibility for meaningful tasks and contribute to your
+        team's progress.
+      </p>
+    </article>
+
+    <article class="info-card">
+      <span class="number">04</span>
+      <h3>Practical Experience</h3>
+      <p>
+        Learn through collaboration, problem-solving, and real product
+        development.
+      </p>
+    </article>
+  </div>
+</section>
+
+<style>
+  .what-is-sxc {
+    padding: 120px 6%;
+    background: #071a2b;
+    color: #ffffff;
+  }
+
+  .section-heading {
+    max-width: 760px;
+    margin-bottom: 55px;
+  }
+
+  .eyebrow {
+    color: #4de4ff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+  }
+
+  h2 {
+    margin: 18px 0;
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+
+  .section-heading p {
+    max-width: 650px;
+    color: #a8bac9;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .info-card {
+    min-height: 245px;
+    padding: 30px;
+    border: 1px solid rgba(77, 228, 255, 0.16);
+    border-radius: 20px;
+    background: linear-gradient(
+      145deg,
+      rgba(20, 55, 79, 0.8),
+      rgba(7, 26, 43, 0.95)
+    );
+  }
+
+  .number {
+    color: #4de4ff;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    margin: 55px 0 18px;
+    font-size: 1.35rem;
+  }
+
+  .info-card p {
+    color: #a8bac9;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1000px) {
+    .info-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .what-is-sxc {
+      padding: 80px 6%;
+    }
+
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

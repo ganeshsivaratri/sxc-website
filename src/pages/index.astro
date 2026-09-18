@@ -1,35 +1,45 @@
 ---
-/* Import reusable SXC components */
 import Header from "../components/header/header.astro";
 import Hero from "../components/hero/Hero.astro";
+import WhatIsSXC from "../components/what-is-sxc/WhatIsSXC.astro";
+import HowSXCWorks from "../components/how-sxc-works/HowSXCWorks.astro";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Basic character encoding -->
     <meta charset="UTF-8" />
-
-    <!-- Responsive layout -->
     <meta name="viewport" content="width=device-width" />
 
-    <!-- Search engine description -->
     <meta
       name="description"
-      content="SintraX Creations — Where students build real products and startup ideas."
+      content="SintraX Creations — Where students work with startup teams, build real projects, and gain practical experience."
     />
 
-    <!-- Browser tab title -->
+    <meta name="theme-color" content="#071a2b" />
+
     <title>SXC | SintraX Creations</title>
   </head>
 
   <body>
-    <!-- Header displayed over the homepage -->
     <Header />
 
-    <!-- Homepage sections -->
     <main>
       <Hero />
+
+      <WhatIsSXC />
+
+      <!-- Experience Highlight -->
+      <section class="experience-highlight" aria-label="SXC experience highlight">
+        <span>EXPERIENCE MATTERS MORE</span>
+
+        <p>
+          Build real projects, gain practical experience, and showcase your
+          work and SXC certificate on LinkedIn.
+        </p>
+      </section>
+
+      <HowSXCWorks />
     </main>
   </body>
 </html>
@@ -39,11 +49,64 @@ import Hero from "../components/hero/Hero.astro";
     box-sizing: border-box;
   }
 
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
   :global(body) {
     min-height: 100vh;
     margin: 0;
     background: #071a2b;
     color: #ffffff;
     font-family: Arial, sans-serif;
+  }
+
+  :global(button),
+  :global(a) {
+    font: inherit;
+  }
+
+  .experience-highlight {
+    padding: 75px 6%;
+    text-align: center;
+    background:
+      radial-gradient(
+        circle at center,
+        rgba(77, 228, 255, 0.08),
+        transparent 65%
+      ),
+      #071a2b;
+    border-top: 1px solid rgba(77, 228, 255, 0.15);
+    border-bottom: 1px solid rgba(77, 228, 255, 0.15);
+  }
+
+  .experience-highlight span {
+    color: #4de4ff;
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  .experience-highlight p {
+    max-width: 680px;
+    margin: 20px auto 0;
+    color: #a8bac9;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 600px) {
+    .experience-highlight {
+      padding: 60px 7%;
+    }
+
+    .experience-highlight span {
+      letter-spacing: 0.12em;
+      line-height: 1.6;
+    }
+
+    .experience-highlight p {
+      font-size: 0.98rem;
+    }
   }
 </style>
