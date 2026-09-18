@@ -1,0 +1,321 @@
+<section class="join-section" id="who-can-join">
+  <div class="join-layout">
+    <div class="join-content">
+      <span class="eyebrow">WHO CAN JOIN SXC</span>
+
+      <h2>
+        Built for Students<br />
+        <span>Who Want to Build.</span>
+      </h2>
+
+      <p class="section-description">
+        SXC is designed for college students who want to gain practical
+        experience by contributing to startup-oriented projects and working
+        with collaborative teams.
+      </p>
+    </div>
+
+    <div class="join-visual">
+      <div class="visual-glow"></div>
+
+      <div class="visual-panel">
+        <span>THE SXC COMMUNITY</span>
+        <strong>LEARN. BUILD. CONTRIBUTE.</strong>
+
+        <div class="visual-lines">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="visual-circle">SXC</div>
+    </div>
+  </div>
+
+  <div class="join-grid">
+    <article class="join-card">
+      <span class="card-number">01</span>
+
+      <div class="card-icon">✦</div>
+
+      <h3>Eligibility</h3>
+
+      <p>
+        Open to motivated college students interested in product development
+        and innovation.
+      </p>
+    </article>
+
+    <article class="join-card">
+      <span class="card-number">02</span>
+
+      <div class="card-icon">▦</div>
+
+      <h3>Academic Year</h3>
+
+      <p>
+        Especially suitable for students in their 2nd and 3rd years of
+        college.
+      </p>
+    </article>
+
+    <article class="join-card">
+      <span class="card-number">03</span>
+
+      <div class="card-icon">◉</div>
+
+      <h3>Team Size</h3>
+
+      <p>
+        Work in collaborative teams of 3–6 members on approved projects.
+      </p>
+    </article>
+
+    <article class="join-card">
+      <span class="card-number">04</span>
+
+      <div class="card-icon">◇</div>
+
+      <h3>Areas of Interest</h3>
+
+      <p>
+        Students from technical, creative, and other relevant backgrounds can
+        contribute to projects.
+      </p>
+    </article>
+  </div>
+</section>
+
+<style>
+  .join-section {
+    padding: 120px 6%;
+    overflow: hidden;
+    background: #071a2b;
+    color: #ffffff;
+  }
+
+  .join-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 70px;
+    max-width: 1400px;
+    margin: 0 auto 70px;
+  }
+
+  .eyebrow {
+    color: #4de4ff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+  }
+
+  h2 {
+    margin: 20px 0;
+    font-size: clamp(2.6rem, 5vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+  }
+
+  h2 span {
+    color: #4de4ff;
+  }
+
+  .section-description {
+    max-width: 650px;
+    color: #a8bac9;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .join-visual {
+    position: relative;
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .visual-glow {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(77, 228, 255, 0.12);
+    filter: blur(70px);
+  }
+
+  .visual-panel {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 390px);
+    padding: 35px;
+    border: 1px solid rgba(77, 228, 255, 0.35);
+    border-radius: 24px;
+    background: linear-gradient(
+      145deg,
+      rgba(20, 65, 91, 0.9),
+      rgba(7, 26, 43, 0.95)
+    );
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+    transform: rotate(-5deg);
+  }
+
+  .visual-panel span {
+    color: #4de4ff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+
+  .visual-panel strong {
+    display: block;
+    margin-top: 35px;
+    font-size: 1.7rem;
+    line-height: 1.2;
+  }
+
+  .visual-lines {
+    display: grid;
+    gap: 12px;
+    margin-top: 35px;
+  }
+
+  .visual-lines div {
+    height: 8px;
+    border-radius: 20px;
+    background: rgba(77, 228, 255, 0.25);
+  }
+
+  .visual-lines div:nth-child(1) {
+    width: 90%;
+  }
+
+  .visual-lines div:nth-child(2) {
+    width: 70%;
+  }
+
+  .visual-lines div:nth-child(3) {
+    width: 50%;
+  }
+
+  .visual-circle {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 105px;
+    height: 105px;
+    border: 1px solid rgba(77, 228, 255, 0.5);
+    border-radius: 50%;
+    background: #0b3047;
+    color: #4de4ff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    box-shadow: 0 0 45px rgba(77, 228, 255, 0.15);
+  }
+
+  .join-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .join-card {
+    min-height: 280px;
+    padding: 30px;
+    border: 1px solid rgba(77, 228, 255, 0.18);
+    border-radius: 22px;
+    background: linear-gradient(
+      145deg,
+      rgba(20, 55, 79, 0.85),
+      rgba(7, 26, 43, 0.95)
+    );
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .join-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(77, 228, 255, 0.7);
+  }
+
+  .card-number {
+    color: #4de4ff;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  .card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin: 28px 0 25px;
+    border: 1px solid rgba(77, 228, 255, 0.3);
+    border-radius: 14px;
+    background: rgba(77, 228, 255, 0.08);
+    color: #4de4ff;
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    margin: 0 0 15px;
+    font-size: 1.3rem;
+  }
+
+  .join-card p {
+    margin: 0;
+    color: #a8bac9;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1100px) {
+    .join-layout {
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+
+    .join-visual {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .join-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .join-section {
+      padding: 80px 6%;
+    }
+
+    .join-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .join-visual {
+      min-height: 280px;
+    }
+
+    .visual-panel {
+      padding: 25px;
+    }
+
+    .visual-circle {
+      right: -5px;
+      width: 85px;
+      height: 85px;
+      font-size: 1.2rem;
+    }
+  }
+</style>
