@@ -1,0 +1,223 @@
+<section class="projects-section" id="what-students-build">
+  <div class="section-header">
+    <span class="eyebrow">WHAT STUDENTS BUILD</span>
+
+    <h2>
+      From Ideas to<br />
+      <span>Working Products.</span>
+    </h2>
+
+    <p>
+      SXC members work on startup-oriented projects that address practical
+      needs and real-world problems.
+    </p>
+  </div>
+
+  <div class="projects-grid">
+    <article class="project-card">
+      <span class="card-number">01</span>
+      <div class="icon">⌘</div>
+      <h3>Web Applications</h3>
+      <p>
+        Build functional web platforms designed to address specific user
+        needs.
+      </p>
+      <span class="card-tag">PRODUCT DEVELOPMENT</span>
+    </article>
+
+    <article class="project-card">
+      <span class="card-number">02</span>
+      <div class="icon">↗</div>
+      <h3>Startup MVPs</h3>
+      <p>
+        Transform promising concepts into practical minimum viable products.
+      </p>
+      <span class="card-tag">STARTUP PROJECTS</span>
+    </article>
+
+    <article class="project-card">
+      <span class="card-number">03</span>
+      <div class="icon">✦</div>
+      <h3>AI-Powered Solutions</h3>
+      <p>
+        Develop intelligent applications that apply AI to practical
+        challenges.
+      </p>
+      <span class="card-tag">EMERGING TECHNOLOGY</span>
+    </article>
+
+    <article class="project-card">
+      <span class="card-number">04</span>
+      <div class="icon">⌂</div>
+      <h3>Student Platforms</h3>
+      <p>
+        Create digital products that address challenges faced by students and
+        educational communities.
+      </p>
+      <span class="card-tag">STUDENT INNOVATION</span>
+    </article>
+
+    <article class="project-card">
+      <span class="card-number">05</span>
+      <div class="icon">▦</div>
+      <h3>Productivity Systems</h3>
+      <p>
+        Design tools that simplify workflows and improve everyday efficiency.
+      </p>
+      <span class="card-tag">DIGITAL SOLUTIONS</span>
+    </article>
+
+    <article class="project-card">
+      <span class="card-number">06</span>
+      <div class="icon">◎</div>
+      <h3>Problem-Solving Products</h3>
+      <p>
+        Develop solutions to meaningful problems identified by teams or
+        project contributors.
+      </p>
+      <span class="card-tag">REAL-WORLD IMPACT</span>
+    </article>
+  </div>
+
+  <div class="section-footer">
+    <p>Every project is an opportunity to build, contribute, and grow.</p>
+  </div>
+</section>
+
+<style>
+  .projects-section {
+    padding: 120px 6%;
+    background: #071a2b;
+    color: #ffffff;
+  }
+
+  .section-header {
+    max-width: 760px;
+    margin-bottom: 60px;
+  }
+
+  .eyebrow {
+    color: #4de4ff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+  }
+
+  h2 {
+    margin: 18px 0;
+    font-size: clamp(2.5rem, 5vw, 4.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+
+  h2 span {
+    color: #4de4ff;
+  }
+
+  .section-header p {
+    max-width: 650px;
+    color: #a8bac9;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .project-card {
+    position: relative;
+    min-height: 300px;
+    padding: 30px;
+    overflow: hidden;
+    border: 1px solid rgba(77, 228, 255, 0.16);
+    border-radius: 22px;
+    background:
+      radial-gradient(
+        circle at 100% 0%,
+        rgba(77, 228, 255, 0.08),
+        transparent 42%
+      ),
+      linear-gradient(
+        145deg,
+        rgba(20, 55, 79, 0.8),
+        rgba(7, 26, 43, 0.95)
+      );
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(77, 228, 255, 0.65);
+  }
+
+  .card-number {
+    color: #4de4ff;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin: 30px 0 24px;
+    border: 1px solid rgba(77, 228, 255, 0.25);
+    border-radius: 14px;
+    color: #4de4ff;
+    font-size: 1.5rem;
+    background: rgba(77, 228, 255, 0.08);
+  }
+
+  h3 {
+    margin: 0 0 15px;
+    font-size: 1.3rem;
+  }
+
+  .project-card p {
+    margin: 0;
+    color: #a8bac9;
+    line-height: 1.7;
+  }
+
+  .card-tag {
+    display: inline-block;
+    margin-top: 25px;
+    color: #6d9caf;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  .section-footer {
+    margin-top: 55px;
+    text-align: center;
+  }
+
+  .section-footer p {
+    color: #a8bac9;
+    font-size: 1.05rem;
+  }
+
+  @media (max-width: 1000px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .projects-section {
+      padding: 80px 6%;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

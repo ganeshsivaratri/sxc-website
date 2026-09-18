@@ -3,6 +3,8 @@ import Header from "../components/header/header.astro";
 import Hero from "../components/hero/Hero.astro";
 import WhatIsSXC from "../components/what-is-sxc/WhatIsSXC.astro";
 import HowSXCWorks from "../components/how-sxc-works/HowSXCWorks.astro";
+import WhatStudentsBuild from "../components/what-students-build/WhatStudentsBuild.astro";
+import SXCExperience from "../components/sxc-experience/SXCExperience.astro";
 ---
 
 <!doctype html>
@@ -29,8 +31,10 @@ import HowSXCWorks from "../components/how-sxc-works/HowSXCWorks.astro";
 
       <WhatIsSXC />
 
-      <!-- Experience Highlight -->
-      <section class="experience-highlight" aria-label="SXC experience highlight">
+      <section
+        class="experience-highlight"
+        aria-label="SXC experience highlight"
+      >
         <span>EXPERIENCE MATTERS MORE</span>
 
         <p>
@@ -40,6 +44,10 @@ import HowSXCWorks from "../components/how-sxc-works/HowSXCWorks.astro";
       </section>
 
       <HowSXCWorks />
+
+      <WhatStudentsBuild />
+
+      <SXCExperience />
     </main>
   </body>
 </html>

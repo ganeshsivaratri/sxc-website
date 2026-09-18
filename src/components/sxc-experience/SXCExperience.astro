@@ -1,0 +1,186 @@
+<section class="experience-section" id="sxc-experience">
+  <div class="section-header">
+    <span class="eyebrow">THE SXC EXPERIENCE</span>
+
+    <h2>
+      More Than Just<br />
+      <span>Building Projects.</span>
+    </h2>
+
+    <p>
+      Experience the process of developing products, collaborating with teams,
+      and contributing to startup-oriented projects.
+    </p>
+  </div>
+
+  <div class="experience-grid">
+    <article class="experience-card featured">
+      <span class="card-number">01</span>
+      <h3>Practical Exposure</h3>
+      <p>
+        Apply your knowledge while working on real product-development tasks.
+      </p>
+    </article>
+
+    <article class="experience-card">
+      <span class="card-number">02</span>
+      <h3>Team Collaboration</h3>
+      <p>
+        Work with other members, share ideas, and contribute to shared goals.
+      </p>
+    </article>
+
+    <article class="experience-card">
+      <span class="card-number">03</span>
+      <h3>Project Ownership</h3>
+      <p>
+        Take responsibility for assigned tasks and play a meaningful role in
+        your project.
+      </p>
+    </article>
+
+    <article class="experience-card">
+      <span class="card-number">04</span>
+      <h3>Problem-Solving</h3>
+      <p>
+        Identify challenges, explore solutions, and improve your product
+        through practice.
+      </p>
+    </article>
+
+    <article class="experience-card">
+      <span class="card-number">05</span>
+      <h3>Portfolio Development</h3>
+      <p>
+        Build meaningful projects that demonstrate your skills and
+        contributions.
+      </p>
+    </article>
+
+    <article class="experience-card">
+      <span class="card-number">06</span>
+      <h3>Startup Environment</h3>
+      <p>
+        Experience a collaborative, startup-oriented approach to building
+        products.
+      </p>
+    </article>
+  </div>
+
+  <div class="experience-footer">
+    <strong>Learn by building. Grow through collaboration. Show your work.</strong>
+  </div>
+</section>
+
+<style>
+  .experience-section {
+    padding: 120px 6%;
+    background: #081f33;
+    color: #ffffff;
+  }
+
+  .section-header {
+    max-width: 760px;
+    margin-bottom: 60px;
+  }
+
+  .eyebrow {
+    color: #4de4ff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+  }
+
+  h2 {
+    margin: 18px 0;
+    font-size: clamp(2.5rem, 5vw, 4.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+
+  h2 span {
+    color: #4de4ff;
+  }
+
+  .section-header p {
+    max-width: 650px;
+    color: #a8bac9;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .experience-card {
+    min-height: 250px;
+    padding: 30px;
+    border: 1px solid rgba(77, 228, 255, 0.16);
+    border-radius: 22px;
+    background: rgba(7, 26, 43, 0.7);
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .experience-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(77, 228, 255, 0.65);
+  }
+
+  .experience-card.featured {
+    background:
+      radial-gradient(
+        circle at 100% 0%,
+        rgba(77, 228, 255, 0.12),
+        transparent 45%
+      ),
+      rgba(7, 26, 43, 0.8);
+  }
+
+  .card-number {
+    color: #4de4ff;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    margin: 55px 0 18px;
+    font-size: 1.3rem;
+  }
+
+  .experience-card p {
+    color: #a8bac9;
+    line-height: 1.7;
+  }
+
+  .experience-footer {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .experience-footer strong {
+    color: #4de4ff;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 600;
+  }
+
+  @media (max-width: 1000px) {
+    .experience-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .experience-section {
+      padding: 80px 6%;
+    }
+
+    .experience-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
