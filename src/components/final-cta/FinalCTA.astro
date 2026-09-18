@@ -1,0 +1,145 @@
+<section class="final-cta" id="join">
+  <div class="cta-container">
+    <span class="cta-label">START BUILDING</span>
+
+    <h2>Your Experience Starts With What You Build.</h2>
+
+    <p>
+      Join SXC, collaborate with like-minded students, work on meaningful
+      projects, and gain practical experience by building real products.
+    </p>
+
+    <div class="cta-actions">
+      <a href="#join" class="cta-button primary">Explore SXC</a>
+      <a href="#join" class="cta-button secondary">Join SXC</a>
+    </div>
+
+    <span class="cta-note">
+      Build together. Learn by doing. Grow through experience.
+    </span>
+  </div>
+</section>
+
+<style>
+  .final-cta {
+    position: relative;
+    padding: 120px 6%;
+    overflow: hidden;
+    background:
+      radial-gradient(
+        circle at 50% 0%,
+        rgba(77, 228, 255, 0.13),
+        transparent 42%
+      ),
+      #071a2b;
+    color: #ffffff;
+  }
+
+  .cta-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 40px;
+    border: 1px solid rgba(77, 228, 255, 0.22);
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.035);
+    text-align: center;
+  }
+
+  .cta-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #4de4ff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+  }
+
+  .cta-container h2 {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.08;
+  }
+
+  .cta-container p {
+    max-width: 650px;
+    margin: 24px auto 0;
+    color: #a9bdca;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .cta-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 145px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      transform 0.25s ease,
+      background 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-3px);
+  }
+
+  .cta-button.primary {
+    background: #4de4ff;
+    color: #071a2b;
+  }
+
+  .cta-button.primary:hover {
+    background: #ffffff;
+  }
+
+  .cta-button.secondary {
+    border: 1px solid rgba(77, 228, 255, 0.5);
+    color: #ffffff;
+  }
+
+  .cta-button.secondary:hover {
+    border-color: #4de4ff;
+    background: rgba(77, 228, 255, 0.1);
+  }
+
+  .cta-note {
+    display: block;
+    margin-top: 28px;
+    color: #718c9d;
+    font-size: 0.82rem;
+  }
+
+  @media (max-width: 600px) {
+    .final-cta {
+      padding: 80px 5%;
+    }
+
+    .cta-container {
+      padding: 50px 22px;
+      border-radius: 20px;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+    }
+
+    .cta-button {
+      width: 100%;
+    }
+  }
+</style>

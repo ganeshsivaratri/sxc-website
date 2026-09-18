@@ -1,0 +1,208 @@
+<section class="faq-section" id="faq">
+  <div class="faq-container">
+    <div class="section-heading">
+      <span class="section-label">FAQ</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>
+        Everything students and parents need to know about the SXC experience.
+      </p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What is SintraX Creations?</summary>
+        <p>
+          SintraX Creations is a student-powered environment where students
+          work on startup-oriented projects, collaborate in teams, build real
+          products, and gain practical experience.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is SXC a job or internship program?</summary>
+        <p>
+          No. SXC is not a job or internship provider. It is a project-building
+          environment focused on practical experience, teamwork, and product
+          development.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do students receive a salary or stipend?</summary>
+        <p>
+          No salary or stipend is guaranteed. SXC focuses on helping students
+          gain practical experience and build a strong project portfolio.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Who can join SXC?</summary>
+        <p>
+          SXC is primarily designed for college students, especially students
+          in their 2nd or 3rd year who are interested in technology, startups,
+          and product development.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How are projects and teams assigned?</summary>
+        <p>
+          Students can explore available projects, choose projects that
+          interest them, and become part of a suitable team based on project
+          requirements and SXC’s evaluation process.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can students propose their own project ideas?</summary>
+        <p>
+          Yes. Students may propose their own ideas. SXC will review the idea
+          and decide whether it is suitable for the program.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Will students receive a certificate?</summary>
+        <p>
+          Students who successfully complete their project and meet the
+          required expectations will receive an SXC certificate.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Does every project become a startup?</summary>
+        <p>
+          No. Some projects may explore commercial opportunities, but not every
+          project becomes a startup or generates revenue.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is the refund policy?</summary>
+        <p>
+          All payments made to SXC are non-refundable. Once the registration or
+          program payment has been completed, it cannot be cancelled or
+          refunded. Students and parents should review the program details
+          carefully before making a payment.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-section {
+    padding: 110px 6%;
+    background: #071a2b;
+    color: #ffffff;
+  }
+
+  .faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .section-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #4de4ff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .section-heading h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.1;
+  }
+
+  .section-heading p {
+    max-width: 620px;
+    margin: 20px auto 0;
+    color: #a9bdca;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .faq-item {
+    border: 1px solid rgba(77, 228, 255, 0.18);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.035);
+    overflow: hidden;
+    transition:
+      border-color 0.25s ease,
+      background 0.25s ease;
+  }
+
+  .faq-item[open] {
+    border-color: rgba(77, 228, 255, 0.55);
+    background: rgba(77, 228, 255, 0.055);
+  }
+
+  .faq-item summary {
+    position: relative;
+    padding: 23px 58px 23px 24px;
+    cursor: pointer;
+    list-style: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    color: #4de4ff;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .faq-item[open] summary::after {
+    content: "−";
+  }
+
+  .faq-item p {
+    margin: 0;
+    padding: 0 58px 24px 24px;
+    color: #a9bdca;
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  @media (max-width: 600px) {
+    .faq-section {
+      padding: 80px 5%;
+    }
+
+    .faq-item summary {
+      padding: 20px 50px 20px 18px;
+    }
+
+    .faq-item p {
+      padding: 0 25px 20px 18px;
+    }
+
+    .faq-item summary::after {
+      right: 18px;
+    }
+  }
+</style>
