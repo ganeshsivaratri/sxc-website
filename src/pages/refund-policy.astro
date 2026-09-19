@@ -1,0 +1,497 @@
+---
+import Header from "../components/header/header.astro";
+import Footer from "../components/footer/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Refund Policy | SintraX Creations</title>
+
+    <meta
+      name="description"
+      content="Read the refund policy for SintraX Creations project-building programs."
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <section class="policy-hero">
+        <div class="hero-content">
+          <span class="eyebrow">SXC POLICIES</span>
+
+          <h1>Refund Policy</h1>
+
+          <p>
+            Please review the payment and refund conditions before registering
+            for an SXC project-building program.
+          </p>
+
+          <span class="updated">Last Updated: September 2026</span>
+        </div>
+      </section>
+
+      <section class="policy-section">
+        <div class="policy-container">
+          <article class="policy-card">
+            <span class="card-number">01</span>
+            <h2>Registration Fee</h2>
+
+            <p>
+              The applicable registration fee for the SXC project-building
+              program is <strong>₹2,999</strong>.
+            </p>
+
+            <p>
+              The registration fee must be paid before participation is
+              confirmed.
+            </p>
+          </article>
+
+          <article class="policy-card">
+            <span class="card-number">02</span>
+            <h2>Non-Refundable Payments</h2>
+
+            <div class="important-box">
+              <strong>All payments made to SXC are non-refundable.</strong>
+
+              <p>
+                Once payment has been completed, participants are not eligible
+                to request or receive a refund.
+              </p>
+            </div>
+
+            <p>
+              This policy applies because project planning, team coordination,
+              resource allocation, and project deadlines may begin after
+              registration.
+            </p>
+          </article>
+
+          <article class="policy-card">
+            <span class="card-number">03</span>
+            <h2>Withdrawal After the Project Begins</h2>
+
+            <p>
+              Participants cannot withdraw from the program after project work
+              has commenced.
+            </p>
+
+            <p>
+              Participants are expected to remain committed to their assigned
+              project and team responsibilities throughout the program.
+            </p>
+          </article>
+
+          <article class="policy-card">
+            <span class="card-number">04</span>
+            <h2>Project Timeline Extension</h2>
+
+            <p>
+              The standard project-building duration is 45 days.
+            </p>
+
+            <p>
+              If additional time is required to complete a project, SXC may
+              extend the project timeline without charging participants any
+              additional fee.
+            </p>
+
+            <p>
+              A timeline extension does not create eligibility for a refund.
+            </p>
+          </article>
+
+          <article class="policy-card">
+            <span class="card-number">05</span>
+            <h2>Before Making Payment</h2>
+
+            <p>
+              Participants are encouraged to carefully review the following
+              information before making payment:
+            </p>
+
+            <ul>
+              <li>Program structure and duration</li>
+              <li>Participation expectations</li>
+              <li>Project responsibilities</li>
+              <li>Payment terms</li>
+              <li>Terms &amp; Conditions</li>
+            </ul>
+
+            <p>
+              If you have questions or need clarification, contact the SXC team
+              before making payment.
+            </p>
+          </article>
+
+          <article class="policy-card">
+            <span class="card-number">06</span>
+            <h2>No Guaranteed Outcomes</h2>
+
+            <p>
+              Payment for participation does not guarantee employment,
+              internships, revenue, startup formation, commercial success, or
+              placement opportunities.
+            </p>
+
+            <p>
+              SXC provides a practical project-building experience. Project
+              outcomes depend on team participation, individual contribution,
+              collaboration, and project requirements.
+            </p>
+          </article>
+
+          <article class="policy-card">
+            <span class="card-number">07</span>
+            <h2>Contact SXC</h2>
+
+            <p>
+              For questions about the registration fee, payment process, or
+              refund policy, contact us before making payment.
+            </p>
+
+            <div class="contact-box">
+              <p>
+                <strong>Email:</strong>
+                <a href="mailto:sintraxcreations@gmail.com">
+                  sintraxcreations@gmail.com
+                </a>
+              </p>
+
+              <p>
+                <strong>WhatsApp:</strong>
+                <a
+                  href="https://api.whatsapp.com/send?phone=919490354451"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  +91 9490354451
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <div class="policy-footer">
+            <p>
+              By proceeding with payment, you acknowledge that you have read
+              and understood this Refund Policy.
+            </p>
+
+            <div class="footer-actions">
+              <a href="/terms" class="secondary-button">
+                View Terms &amp; Conditions
+              </a>
+
+              <a href="/join" class="primary-button">
+                Return to Registration
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  :global(body) {
+    margin: 0;
+    background: #f4f8fc;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172b3d;
+  }
+
+  .policy-hero {
+    position: relative;
+    padding: 155px 24px 90px;
+    overflow: hidden;
+    color: #ffffff;
+    background:
+      radial-gradient(
+        circle at 85% 20%,
+        rgba(24, 213, 232, 0.16),
+        transparent 30%
+      ),
+      linear-gradient(135deg, #071a2b, #0b263d);
+  }
+
+  .policy-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(
+        rgba(255, 255, 255, 0.035) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.035) 1px,
+        transparent 1px
+      );
+    background-size: 42px 42px;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    width: min(900px, 100%);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #18d5e8;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.3rem, 6vw, 4.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+  }
+
+  .hero-content p {
+    max-width: 680px;
+    margin: 24px auto 18px;
+    color: #c7d7e5;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .updated {
+    color: #91aabd;
+    font-size: 0.85rem;
+  }
+
+  .policy-section {
+    padding: 75px 24px;
+  }
+
+  .policy-container {
+    width: min(960px, 100%);
+    margin: 0 auto;
+  }
+
+  .policy-card {
+    position: relative;
+    margin-bottom: 22px;
+    padding: 34px;
+    border: 1px solid #dce7f0;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 28px rgba(7, 26, 43, 0.045);
+  }
+
+  .card-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    background: #e8faff;
+    color: #087ca5;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    margin: 0 0 18px;
+    color: #071a2b;
+    font-size: 1.3rem;
+    line-height: 1.35;
+  }
+
+  p,
+  li {
+    color: #526779;
+    font-size: 0.98rem;
+    line-height: 1.8;
+  }
+
+  p {
+    margin: 0 0 14px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin: 0 0 16px;
+    padding-left: 22px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    color: #19364b;
+  }
+
+  .important-box {
+    margin: 22px 0;
+    padding: 22px;
+    border-left: 4px solid #e05252;
+    border-radius: 10px;
+    background: #fff3f3;
+  }
+
+  .important-box strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #b52e2e;
+    font-size: 1.05rem;
+  }
+
+  .important-box p {
+    color: #7d5050;
+  }
+
+  .contact-box {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f2f7fb;
+  }
+
+  .contact-box p {
+    overflow-wrap: anywhere;
+  }
+
+  a {
+    color: #087ca5;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .policy-footer {
+    padding: 34px;
+    border-radius: 18px;
+    background: #071a2b;
+    text-align: center;
+  }
+
+  .policy-footer p {
+    margin-bottom: 24px;
+    color: #c4d4e1;
+  }
+
+  .footer-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .primary-button {
+    background: linear-gradient(135deg, #18d5e8, #2f80ed);
+    color: #ffffff;
+  }
+
+  .secondary-button {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #d8e9f5;
+  }
+
+  .primary-button:hover,
+  .secondary-button:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+
+  .primary-button:hover {
+    color: #ffffff;
+  }
+
+  .secondary-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+  }
+
+  @media (max-width: 600px) {
+    .policy-hero {
+      padding: 130px 20px 65px;
+    }
+
+    .policy-section {
+      padding: 45px 16px;
+    }
+
+    .policy-card {
+      padding: 25px 20px;
+      border-radius: 14px;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+    }
+
+    p,
+    li {
+      font-size: 0.93rem;
+      line-height: 1.7;
+    }
+
+    .policy-footer {
+      padding: 28px 20px;
+    }
+
+    .footer-actions {
+      flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+      width: 100%;
+    }
+  }
+</style>

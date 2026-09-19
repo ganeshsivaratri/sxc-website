@@ -4,10 +4,10 @@
   <div class="footer-container">
     <!-- Brand Section -->
     <div class="footer-brand">
-      <a href="/" class="brand">
+      <a href="/" class="brand" aria-label="SintraX Creations Home">
         <img
           src="/images/sxc-logo.png"
-          alt="Sintrax Creations logo"
+          alt="SintraX Creations logo"
           class="footer-logo"
         />
       </a>
@@ -21,7 +21,7 @@
         href="mailto:sintraxcreations@gmail.com"
         class="email-link"
       >
-        <span class="email-icon">✉</span>
+        <span class="email-icon" aria-hidden="true">✉</span>
         sintraxcreations@gmail.com
       </a>
     </div>
@@ -59,8 +59,22 @@
         href="mailto:sintraxcreations@gmail.com"
         class="contact-button"
       >
-        Contact Us
-        <span>↗</span>
+        <span>Contact Us</span>
+
+        <svg
+          class="contact-arrow"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M5 12H19M12 5L19 12L12 19"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
       </a>
     </div>
   </div>
@@ -68,12 +82,12 @@
   <div class="footer-divider"></div>
 
   <div class="footer-bottom">
-    <p>© 2026 Sintrax Creations. All rights reserved.</p>
+    <p>© 2026 SintraX Creations. All rights reserved.</p>
 
     <div class="legal-links">
-      <a href="#">Terms &amp; Conditions</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Refund Policy</a>
+      <a href="/terms">Terms &amp; Conditions</a>
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/refund-policy">Refund Policy</a>
     </div>
   </div>
 </footer>
@@ -84,9 +98,9 @@
     isolation: isolate;
     overflow: hidden;
     padding: 85px 6% 28px;
+    border-top: 1px solid rgba(77, 228, 255, 0.16);
     background: #04121f;
     color: #ffffff;
-    border-top: 1px solid rgba(77, 228, 255, 0.16);
   }
 
   .footer-glow {
@@ -105,7 +119,7 @@
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
     gap: 55px;
-    max-width: 1280px;
+    width: min(1280px, 100%);
     margin: 0 auto;
   }
 
@@ -142,7 +156,7 @@
     font-size: 0.88rem;
     font-weight: 600;
     text-decoration: none;
-    word-break: break-word;
+    overflow-wrap: anywhere;
     transition: color 0.25s ease;
   }
 
@@ -151,6 +165,7 @@
   }
 
   .email-icon {
+    flex-shrink: 0;
     font-size: 1rem;
   }
 
@@ -210,18 +225,26 @@
       transform 0.25s ease;
   }
 
-  .contact-button span {
-    font-size: 1.1rem;
+  .contact-arrow {
+    width: 19px;
+    height: 19px;
+    transition: transform 0.25s ease;
   }
 
   .contact-button:hover {
     border-color: #4de4ff;
     background: rgba(77, 228, 255, 0.14);
+    color: #4de4ff;
+    text-decoration: none;
     transform: translateY(-2px);
   }
 
+  .contact-button:hover .contact-arrow {
+    transform: translateX(4px);
+  }
+
   .footer-divider {
-    max-width: 1280px;
+    width: min(1280px, 100%);
     height: 1px;
     margin: 65px auto 24px;
     background: rgba(145, 170, 185, 0.15);
@@ -229,10 +252,10 @@
 
   .footer-bottom {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 25px;
-    max-width: 1280px;
+    width: min(1280px, 100%);
     margin: 0 auto;
   }
 
