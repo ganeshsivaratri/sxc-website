@@ -1,0 +1,375 @@
+---
+import Header from "../components/header/header.astro";
+import Footer from "../components/footer/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Join SXC | Sintrax Creations</title>
+
+    <meta
+      name="description"
+      content="Register for the SintraX Creations Student Builder Community."
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main class="join-page">
+      <section class="join-intro">
+        <span class="eyebrow">JOIN THE COMMUNITY</span>
+
+        <h1>
+          Start Your
+          <span>SXC Journey.</span>
+        </h1>
+
+        <p>
+          Complete the registration form below to join the SintraX Creations
+          Student Builder Community.
+        </p>
+
+        <div class="intro-note">
+          <strong>Before you begin:</strong>
+          Please provide accurate information. Our team may contact you
+          through WhatsApp or phone for further discussion.
+        </div>
+      </section>
+
+      <!-- Google Registration Form -->
+      <section class="form-section" aria-label="SXC Registration Form">
+        <div class="form-wrapper">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdo99IOc3mbc5sTdNPT1YLGd4uvjoYTbjA_1_7M9dkrvO4u7A/viewform?embedded=true"
+            title="SXC Student Builder Community Registration Form"
+            loading="lazy"
+          >
+            Loading registration form…
+          </iframe>
+        </div>
+      </section>
+
+      <!-- WhatsApp Contact Section -->
+      <section class="whatsapp-section" aria-label="Contact SXC on WhatsApp">
+        <div class="whatsapp-card">
+          <div class="whatsapp-icon">
+            <svg
+              viewBox="0 0 32 32"
+              role="img"
+              aria-label="WhatsApp logo"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="currentColor"
+                d="M16 2.5A13.5 13.5 0 0 0 4.32 22.78L2.5 29.5l6.93-1.82A13.5 13.5 0 1 0 16 2.5Zm0 24.5a11 11 0 0 1-5.6-1.53l-.4-.24-4.11 1.08 1.1-4-.26-.41A11 11 0 1 1 16 27Zm6.05-8.25c-.33-.17-1.96-.97-2.26-1.08-.3-.11-.52-.17-.74.17-.22.33-.85 1.08-1.04 1.3-.19.22-.38.25-.71.08-.33-.17-1.38-.51-2.63-1.63-.97-.86-1.63-1.92-1.82-2.25-.19-.33-.02-.51.14-.68.15-.15.33-.38.5-.57.17-.19.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.74-1.79-1.01-2.45-.27-.65-.54-.56-.74-.57h-.63c-.22 0-.58.08-.88.41-.3.33-1.15 1.12-1.15 2.73s1.18 3.17 1.34 3.39c.17.22 2.32 3.54 5.62 4.97.79.34 1.41.54 1.89.69.79.25 1.51.21 2.08.13.64-.1 1.96-.8 2.24-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"
+              />
+            </svg>
+          </div>
+
+          <div class="whatsapp-content">
+            <span class="whatsapp-label">NEXT STEP</span>
+
+            <h2>Connect with the SXC Team</h2>
+
+            <p>
+              After submitting the registration form, contact an SXC team
+              member on WhatsApp for further details about project allocation,
+              program information, payment, and the next steps.
+            </p>
+
+            <a
+              class="whatsapp-button"
+              href="https://wa.me/919490354451"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="currentColor"
+                  d="M16 2.5A13.5 13.5 0 0 0 4.32 22.78L2.5 29.5l6.93-1.82A13.5 13.5 0 1 0 16 2.5Zm0 24.5a11 11 0 0 1-5.6-1.53l-.4-.24-4.11 1.08 1.1-4-.26-.41A11 11 0 1 1 16 27Zm6.05-8.25c-.33-.17-1.96-.97-2.26-1.08-.3-.11-.52-.17-.74.17-.22.33-.85 1.08-1.04 1.3-.19.22-.38.25-.71.08-.33-.17-1.38-.51-2.63-1.63-.97-.86-1.63-1.92-1.82-2.25-.19-.33-.02-.51.14-.68.15-.15.33-.38.5-.57.17-.19.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.74-1.79-1.01-2.45-.27-.65-.54-.56-.74-.57h-.63c-.22 0-.58.08-.88.41-.3.33-1.15 1.12-1.15 2.73s1.18 3.17 1.34 3.39c.17.22 2.32 3.54 5.62 4.97.79.34 1.41.54 1.89.69.79.25 1.51.21 2.08.13.64-.1 1.96-.8 2.24-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"
+                />
+              </svg>
+
+              Join SXC on WhatsApp
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  :global(body) {
+    margin: 0;
+    background: #071a2b;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .join-page {
+    min-height: 100vh;
+    padding: 145px 24px 90px;
+    background:
+      radial-gradient(
+        circle at 15% 10%,
+        rgba(24, 213, 232, 0.1),
+        transparent 32%
+      ),
+      #071a2b;
+  }
+
+  .join-intro {
+    max-width: 850px;
+    margin: 0 auto 45px;
+    text-align: center;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #18d5e8;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+  }
+
+  h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+
+  h1 span {
+    display: block;
+    color: #18d5e8;
+  }
+
+  .join-intro p {
+    max-width: 650px;
+    margin: 25px auto 0;
+    color: #b5c6d5;
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .intro-note {
+    max-width: 700px;
+    margin: 28px auto 0;
+    padding: 18px 22px;
+    border: 1px solid rgba(24, 213, 232, 0.2);
+    border-radius: 14px;
+    background: rgba(11, 38, 61, 0.75);
+    color: #b5c6d5;
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .intro-note strong {
+    color: #ffffff;
+  }
+
+  .form-section {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+
+  .form-wrapper {
+    overflow: hidden;
+    min-height: 1250px;
+    border: 1px solid rgba(24, 213, 232, 0.2);
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+    min-height: 1250px;
+    border: 0;
+    background: #ffffff;
+  }
+
+  /* WhatsApp Section */
+
+  .whatsapp-section {
+    max-width: 1050px;
+    margin: 45px auto 0;
+  }
+
+  .whatsapp-card {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 38px;
+    border: 1px solid rgba(24, 213, 232, 0.25);
+    border-radius: 22px;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(24, 213, 232, 0.12),
+        rgba(11, 38, 61, 0.92)
+      );
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  }
+
+  .whatsapp-icon {
+    display: grid;
+    flex-shrink: 0;
+    width: 82px;
+    height: 82px;
+    place-items: center;
+    border-radius: 50%;
+    background: #25d366;
+    color: #ffffff;
+    box-shadow: 0 0 35px rgba(37, 211, 102, 0.25);
+  }
+
+  .whatsapp-icon svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsapp-content {
+    flex: 1;
+  }
+
+  .whatsapp-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #18d5e8;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+  }
+
+  .whatsapp-content h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    line-height: 1.2;
+  }
+
+  .whatsapp-content p {
+    max-width: 760px;
+    margin: 15px 0 24px;
+    color: #b5c6d5;
+    font-size: 0.98rem;
+    line-height: 1.8;
+  }
+
+  .whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    padding: 14px 21px;
+    border: 1px solid #25d366;
+    border-radius: 999px;
+    background: #25d366;
+    color: #062015;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      background 0.25s ease;
+  }
+
+  .whatsapp-button svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .whatsapp-button span {
+    margin-left: 5px;
+    font-size: 1.2rem;
+  }
+
+  .whatsapp-button:hover {
+    transform: translateY(-3px);
+    background: #35e477;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.25);
+  }
+
+  @media (max-width: 700px) {
+    .join-page {
+      padding: 120px 14px 60px;
+    }
+
+    .join-intro {
+      margin-bottom: 30px;
+    }
+
+    .join-intro p {
+      font-size: 0.98rem;
+    }
+
+    .intro-note {
+      padding: 16px;
+      text-align: left;
+    }
+
+    .form-wrapper {
+      min-height: 1400px;
+      border-radius: 12px;
+    }
+
+    iframe {
+      min-height: 1400px;
+    }
+
+    .whatsapp-section {
+      margin-top: 30px;
+    }
+
+    .whatsapp-card {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 28px 22px;
+      gap: 22px;
+    }
+
+    .whatsapp-icon {
+      width: 68px;
+      height: 68px;
+    }
+
+    .whatsapp-icon svg {
+      width: 44px;
+      height: 44px;
+    }
+
+    .whatsapp-content p {
+      font-size: 0.93rem;
+    }
+
+    .whatsapp-button {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+</style>
