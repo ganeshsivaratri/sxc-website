@@ -55,8 +55,8 @@
 <style>
   .what-is-sxc {
     padding: 120px 6%;
-    background: #071a2b;
-    color: #ffffff;
+    background: #ffffff;
+    color: #071a2b;
   }
 
   .section-heading {
@@ -65,7 +65,7 @@
   }
 
   .eyebrow {
-    color: #4de4ff;
+    color: #168fd1;
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.18em;
@@ -73,6 +73,7 @@
 
   h2 {
     margin: 18px 0;
+    color: #071a2b;
     font-size: clamp(2.3rem, 5vw, 4.5rem);
     line-height: 1.05;
     letter-spacing: -0.04em;
@@ -80,7 +81,7 @@
 
   .section-heading p {
     max-width: 650px;
-    color: #a8bac9;
+    color: #5d7182;
     font-size: 1.05rem;
     line-height: 1.8;
   }
@@ -94,28 +95,36 @@
   .info-card {
     min-height: 245px;
     padding: 30px;
-    border: 1px solid rgba(77, 228, 255, 0.16);
+    border: 1px solid #dce7ef;
     border-radius: 20px;
-    background: linear-gradient(
-      145deg,
-      rgba(20, 55, 79, 0.8),
-      rgba(7, 26, 43, 0.95)
-    );
+    background: #f7fafc;
+    box-shadow: 0 10px 30px rgba(7, 26, 43, 0.04);
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .info-card:hover {
+    transform: translateY(-5px);
+    border-color: #b9dce9;
+    box-shadow: 0 16px 35px rgba(7, 26, 43, 0.08);
   }
 
   .number {
-    color: #4de4ff;
+    color: #168fd1;
     font-size: 0.85rem;
     font-weight: 700;
   }
 
   h3 {
     margin: 55px 0 18px;
+    color: #071a2b;
     font-size: 1.35rem;
   }
 
   .info-card p {
-    color: #a8bac9;
+    color: #617687;
     line-height: 1.7;
   }
 
@@ -130,8 +139,22 @@
       padding: 80px 6%;
     }
 
+    .section-heading {
+      margin-bottom: 35px;
+    }
+
     .info-grid {
       grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .info-card {
+      min-height: auto;
+      padding: 25px;
+    }
+
+    h3 {
+      margin: 35px 0 14px;
     }
   }
 </style>

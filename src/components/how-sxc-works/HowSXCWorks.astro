@@ -1,5 +1,5 @@
 <section class="how-it-works" id="how-it-works">
-  <div class="section-heading">
+  <div class="section-heading reveal">
     <span class="eyebrow">HOW SXC WORKS</span>
 
     <h2>
@@ -14,57 +14,88 @@
   </div>
 
   <div class="steps-grid">
-    <article class="step-card">
+    <article class="step-card reveal" style="--delay: 0.1s">
       <span class="step-number">01</span>
-      <h3>Join</h3>
-      <p>
-        Become an SXC member and explore available startup projects.
-      </p>
+
+      <div class="step-content">
+        <h3>Join</h3>
+        <p>
+          Become an SXC member and explore available startup projects.
+        </p>
+      </div>
     </article>
 
-    <article class="step-card">
+    <article class="step-card reveal" style="--delay: 0.2s">
       <span class="step-number">02</span>
-      <h3>Get Selected</h3>
-      <p>
-        Choose a project that interests you and become part of its team.
-      </p>
+
+      <div class="step-content">
+        <h3>Get Selected</h3>
+        <p>
+          Choose a project that interests you and become part of its team.
+        </p>
+      </div>
     </article>
 
-    <article class="step-card">
+    <article class="step-card reveal" style="--delay: 0.3s">
       <span class="step-number">03</span>
-      <h3>Build</h3>
-      <p>
-        Work with your team to develop the project and solve real problems.
-      </p>
+
+      <div class="step-content">
+        <h3>Build</h3>
+        <p>
+          Work with your team to develop the project and solve real problems.
+        </p>
+      </div>
     </article>
 
-    <article class="step-card">
+    <article class="step-card reveal" style="--delay: 0.4s">
       <span class="step-number">04</span>
-      <h3>Get Certified</h3>
-      <p>
-        Complete your project, receive your SXC certificate, and showcase your
-        experience on LinkedIn.
-      </p>
+
+      <div class="step-content">
+        <h3>Get Certified</h3>
+        <p>
+          Complete your project, receive your SXC certificate, and showcase
+          your experience on LinkedIn.
+        </p>
+      </div>
     </article>
   </div>
 </section>
 
 <style>
   .how-it-works {
+    position: relative;
+    overflow: hidden;
     padding: 120px 6%;
-    background: #081f33;
-    color: #ffffff;
+    background: #ffffff;
+    color: #081f33;
+  }
+
+  /* Subtle background decoration */
+  .how-it-works::before {
+    content: "";
+    position: absolute;
+    top: -180px;
+    right: -180px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: rgba(77, 228, 255, 0.09);
+    filter: blur(80px);
+    pointer-events: none;
   }
 
   .section-heading {
+    position: relative;
+    z-index: 1;
     max-width: 760px;
     margin-bottom: 55px;
   }
 
   .eyebrow {
-    color: #4de4ff;
+    display: inline-block;
+    color: #087ea4;
     font-size: 0.8rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.18em;
   }
 
@@ -77,47 +108,95 @@
 
   .section-heading p {
     max-width: 650px;
-    color: #a8bac9;
+    color: #617383;
     font-size: 1.05rem;
     line-height: 1.8;
   }
 
   .steps-grid {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 18px;
   }
 
   .step-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     min-height: 245px;
     padding: 30px;
-    border: 1px solid rgba(77, 228, 255, 0.18);
+    overflow: hidden;
+    border: 1px solid #dce8ee;
     border-radius: 20px;
-    background: rgba(7, 26, 43, 0.65);
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(8, 31, 51, 0.04);
     transition:
-      transform 0.3s ease,
-      border-color 0.3s ease;
+      transform 0.35s ease,
+      border-color 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  .step-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #4de4ff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
   }
 
   .step-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(77, 228, 255, 0.7);
+    transform: translateY(-8px);
+    border-color: #4de4ff;
+    box-shadow: 0 18px 45px rgba(8, 31, 51, 0.1);
+  }
+
+  .step-card:hover::before {
+    transform: scaleX(1);
   }
 
   .step-number {
-    color: #4de4ff;
+    color: #087ea4;
     font-size: 0.85rem;
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+  .step-content {
+    margin-top: auto;
   }
 
   h3 {
     margin: 55px 0 18px;
+    color: #081f33;
     font-size: 1.35rem;
   }
 
   .step-card p {
-    color: #a8bac9;
+    margin: 0;
+    color: #617383;
     line-height: 1.7;
+  }
+
+  /* Scroll-reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+      opacity 0.8s ease,
+      transform 0.8s ease;
+    transition-delay: var(--delay, 0s);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   @media (max-width: 1000px) {
@@ -134,5 +213,44 @@
     .steps-grid {
       grid-template-columns: 1fr;
     }
+
+    .step-card {
+      min-height: 220px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .step-card,
+    .step-card::before {
+      transition: none;
+    }
   }
 </style>
+
+<script>
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+    }
+  );
+
+  revealElements.forEach((element) => {
+    revealObserver.observe(element);
+  });
+</script>
