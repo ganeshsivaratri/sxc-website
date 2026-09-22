@@ -1,43 +1,674 @@
 ---
-import ProjectsHero from "../components/projects-hero/ProjectsHero.astro";
-import OngoingProjects from "../components/ongoing-projects/OngoingProjects.astro";
-import TeamAssigningProjects from "../components/team-assigning-projects/TeamAssigningProjects.astro";
-import IdeaDesigningProjects from "../components/idea-designing-projects/IdeaDesigningProjects.astro";
-import UpcomingProjects from "../components/upcoming-projects/UpcomingProjects.astro";
 import Header from "../components/header/header.astro";
-import Footer from "../components/footer/Footer.astro";
+import ProjectsHero from "../components/projects-hero/ProjectsHero.astro";
 import ProjectsFinalCTA from "../components/projects-final-cta/ProjectsFinalCTA.astro";
+import Footer from "../components/footer/Footer.astro";
+
+const careerProjects = [
+  {
+    name: "LocoRide",
+    category: "Local Ride-Booking Platform",
+    pain: "Limited local transport options and fewer earning opportunities for local drivers.",
+    solution:
+      "An affordable local ride-booking platform connecting passengers with auto drivers and bike-taxi captains.",
+    users: "Passengers, auto drivers, bike-taxi captains",
+    importance: "9/10",
+    members: "5–7",
+  },
+  {
+    name: "LokalRentals",
+    category: "Peer-to-Peer Vehicle Rental",
+    pain: "Expensive rentals and limited access to suitable local vehicles.",
+    solution:
+      "A peer-to-peer platform where vehicle owners can list vehicles and renters can discover and request them.",
+    users: "Vehicle owners, renters, local communities",
+    importance: "8/10",
+    members: "6–8",
+  },
+  {
+    name: "AI MidTeammate",
+    category: "Collaborative AI Workspace",
+    pain: "Teams struggle with planning, coordination, task management, and execution.",
+    solution:
+      "An AI-assisted workspace that helps teams plan, execute, organize, and track project work.",
+    users: "Student teams, project teams, small organizations",
+    importance: "9/10",
+    members: "6–8",
+  },
+  {
+    name: "Hostel Service",
+    category: "Task-Based Service Platform",
+    pain: "Hostel residents need everyday task help while service providers need access to customers.",
+    solution:
+      "A task-based platform connecting hostel residents with verified service providers.",
+    users: "Hostel residents, service providers, administrators",
+    importance: "9/10",
+    members: "5–7",
+  },
+  {
+    name: "Codentra AI",
+    category: "AI Learning Platform",
+    pain: "Traditional learning can lack practical guidance, interaction, and personalization.",
+    solution:
+      "An AI-assisted learning platform combining courses, guidance, learning support, and practical projects.",
+    users: "Students, learners, educators",
+    importance: "9/10",
+    members: "6–8",
+  },
+  {
+    name: "Footwear Bazaar",
+    category: "B2B Footwear Marketplace",
+    pain: "Suppliers can struggle to reach reliable retailers and manage business relationships.",
+    solution:
+      "A B2B marketplace connecting footwear manufacturers and suppliers with retailers.",
+    users: "Manufacturers, suppliers, retailers",
+    importance: "8/10",
+    members: "6–8",
+  },
+  {
+    name: "WhatsApp Automation Agent",
+    category: "Business Automation",
+    pain: "Businesses spend time responding to repetitive customer questions and requests.",
+    solution:
+      "Automation for common WhatsApp conversations, FAQs, customer interactions, and routine communication.",
+    users: "Small businesses, service businesses, customers",
+    importance: "9/10",
+    members: "5–7",
+  },
+  {
+    name: "AI Voice Receptionist",
+    category: "AI Voice Agent",
+    pain: "Businesses can miss calls and potential customers when calls are not answered.",
+    solution:
+      "An AI voice receptionist that handles common calls, provides information, and routes conversations.",
+    users: "Businesses, service providers, callers",
+    importance: "9/10",
+    members: "5–7",
+  },
+  {
+    name: "AI Business Operations Agent",
+    category: "Business Workflow Automation",
+    pain: "Routine operational work consumes time and can introduce manual errors.",
+    solution:
+      "An AI agent designed to support repetitive business workflows and operational tasks.",
+    users: "Small businesses, operations teams, entrepreneurs",
+    importance: "9/10",
+    members: "6–8",
+  },
+  {
+    name: "LinkedJob Search Agent",
+    category: "AI Job Search Agent",
+    pain: "Students and graduates spend considerable time discovering suitable opportunities.",
+    solution:
+      "An AI-assisted system for job discovery, profile matching, opportunity organization, and application tracking.",
+    users: "Students, graduates, job seekers",
+    importance: "8/10",
+    members: "5–7",
+  },
+  {
+    name: "Sales & Lead Generation Agent",
+    category: "AI Sales Agent",
+    pain: "Finding, qualifying, organizing, and following up with leads can be repetitive.",
+    solution:
+      "An AI-assisted system for lead discovery, qualification, organization, and follow-up.",
+    users: "Sales teams, startups, small businesses",
+    importance: "9/10",
+    members: "6–8",
+  },
+  {
+    name: "E-commerce Stock Manager SaaS",
+    category: "Inventory Management Platform",
+    pain: "Manual inventory management can cause stock errors, stockouts, and poor visibility.",
+    solution:
+      "An inventory platform with stock tracking, low-stock alerts, and reporting.",
+    users: "Online sellers, retailers, e-commerce businesses",
+    importance: "8/10",
+    members: "5–7",
+  },
+  {
+    name: "AI Website Generator",
+    category: "AI Website Creation Platform",
+    pain: "Creating websites can require significant technical knowledge and development time.",
+    solution:
+      "A platform that generates website structures and code from user instructions.",
+    users: "Students, creators, small businesses, entrepreneurs",
+    importance: "9/10",
+    members: "6–8",
+  },
+];
+
+const midRangeProjects = [
+  {
+    name: "AI Customisable Chatbot",
+    category: "Custom AI Chatbot Platform",
+    pain: "Organizations need configurable chatbots for different information and use cases.",
+    solution:
+      "A customizable chatbot with configurable knowledge, behavior, and deployment options.",
+    users: "Businesses, colleges, creators, communities",
+    importance: "9/10",
+    members: "4–6",
+  },
+  {
+    name: "AI Python Tutor",
+    category: "Interactive Python Learning Assistant",
+    pain: "Beginners struggle to understand programming errors and decide what to learn next.",
+    solution:
+      "An AI tutor that explains Python concepts, reviews code, provides exercises, and guides learners.",
+    users: "Students, beginners, programming learners",
+    importance: "9/10",
+    members: "4–6",
+  },
+  {
+    name: "AI Frontend Tutor",
+    category: "AI Frontend Learning Assistant",
+    pain: "Frontend learners struggle with concepts, debugging, and applying HTML, CSS, and JavaScript.",
+    solution:
+      "An AI tutor focused on frontend concepts, code explanations, debugging, and guided practice.",
+    users: "Frontend learners, students, beginner developers",
+    importance: "9/10",
+    members: "4–6",
+  },
+  {
+    name: "n8n WhatsApp Automation",
+    category: "WhatsApp Business Automation",
+    pain: "Businesses repeatedly perform manual WhatsApp communication and routine tasks.",
+    solution:
+      "Automated WhatsApp workflows using n8n, APIs, webhooks, and connected services.",
+    users: "Small businesses, service providers, organizations",
+    importance: "9/10",
+    members: "4–6",
+  },
+  {
+    name: "Automatic LinkedIn Job Apply Automation",
+    category: "Job Application Workflow Automation",
+    pain: "Job seekers spend time finding opportunities, preparing applications, and tracking progress.",
+    solution:
+      "A workflow assisting with opportunity discovery, fit evaluation, application preparation, and tracking.",
+    users: "Students, graduates, job seekers",
+    importance: "9/10",
+    members: "5–7",
+  },
+  {
+    name: "AI Resume Builder & Optimizer",
+    category: "AI Resume Platform",
+    pain: "Creating role-specific resumes and improving them for opportunities takes time.",
+    solution:
+      "An AI platform that generates, analyzes, and improves resumes against job descriptions.",
+    users: "Students, graduates, job seekers",
+    importance: "9/10",
+    members: "4–6",
+  },
+  {
+    name: "AI Interview Coach",
+    category: "AI Interview Practice Platform",
+    pain: "Learners often lack realistic interview practice and structured feedback.",
+    solution:
+      "An interview simulator with role-specific questions, response analysis, and feedback.",
+    users: "Students, graduates, job seekers",
+    importance: "9/10",
+    members: "4–6",
+  },
+  {
+    name: "AI GitHub Project Explainer",
+    category: "AI Codebase Understanding Tool",
+    pain: "Understanding an unfamiliar GitHub repository can take significant time.",
+    solution:
+      "A tool that analyzes repositories, architecture, files, technologies, and major components.",
+    users: "Students, developers, teams",
+    importance: "8/10",
+    members: "4–6",
+  },
+  {
+    name: "AI Code Debugging Assistant",
+    category: "AI Debugging Platform",
+    pain: "Beginners struggle to understand programming errors and identify fixes.",
+    solution:
+      "An AI assistant that explains errors, identifies causes, and guides users toward fixes.",
+    users: "Students, beginners, programmers",
+    importance: "9/10",
+    members: "4–6",
+  },
+  {
+    name: "AI Documentation Generator",
+    category: "Automated Project Documentation",
+    pain: "Writing project documentation can take considerable development time.",
+    solution:
+      "Generate README files, API documentation, technical explanations, and project documentation.",
+    users: "Developers, student teams, startups",
+    importance: "8/10",
+    members: "4–6",
+  },
+  {
+    name: "AI Study Notes Generator",
+    category: "AI Learning Material Assistant",
+    pain: "Students spend time converting large learning materials into revision resources.",
+    solution:
+      "Generate summaries, structured notes, flashcards, and practice questions.",
+    users: "Students, learners, educators",
+    importance: "8/10",
+    members: "4–6",
+  },
+  {
+    name: "AI PDF / Document Q&A",
+    category: "Document Intelligence Platform",
+    pain: "Finding specific information inside large documents can be difficult.",
+    solution:
+      "Users can upload documents and ask questions about their contents using AI.",
+    users: "Students, researchers, businesses, teams",
+    importance: "9/10",
+    members: "4–6",
+  },
+  {
+    name: "AI Email Assistant",
+    category: "AI Email Productivity Tool",
+    pain: "Reading, summarizing, classifying, and drafting emails consumes time.",
+    solution:
+      "An AI assistant for email summarization, classification, drafting, and productivity support.",
+    users: "Students, professionals, businesses",
+    importance: "8/10",
+    members: "4–6",
+  },
+  {
+    name: "AI Lead Qualification Automation",
+    category: "Automated Lead Qualification",
+    pain: "Collecting information and manually qualifying leads can be repetitive.",
+    solution:
+      "An automated system for capturing, qualifying, categorizing, and organizing leads.",
+    users: "Startups, sales teams, small businesses",
+    importance: "9/10",
+    members: "5–7",
+  },
+  {
+    name: "n8n Business Workflow Automation Hub",
+    category: "Workflow Automation Dashboard",
+    pain: "Multiple disconnected workflows can be difficult to monitor and manage.",
+    solution:
+      "A dashboard for managing, monitoring, and organizing connected n8n business workflows.",
+    users: "Businesses, operations teams, startups",
+    importance: "9/10",
+    members: "5–7",
+  },
+];
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>SXC Projects | Sintrax Creations</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
     <meta
       name="description"
-      content="Explore ongoing, team-assigning, idea-designing, and upcoming projects at Sintrax Creations."
+      content="Explore Career Projects and Mid-Range Projects at SintraX Creations."
     />
+
+    <title>Projects | SintraX Creations</title>
   </head>
 
   <body>
     <Header />
 
     <main>
+
+      <!-- =====================================================
+           PROJECT HERO
+      ====================================================== -->
+
       <ProjectsHero />
-      <OngoingProjects />
-      <TeamAssigningProjects />
-      <IdeaDesigningProjects />
-      <UpcomingProjects />
+
+
+      <!-- =====================================================
+           CAREER PROJECTS
+      ====================================================== -->
+
+      <section class="projects-section">
+        <div class="container">
+
+          <header class="section-header">
+
+            <div class="section-title">
+
+              <span class="section-index">
+                01
+              </span>
+
+              <div>
+
+                <span class="section-kicker">
+                  PROJECT CATEGORY
+                </span>
+
+                <h1>
+                  CAREER PROJECTS
+                </h1>
+
+                <p>
+                  Larger projects built around real-world problems,
+                  practical development, and career experience.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="section-count">
+
+              <strong>
+                {careerProjects.length}
+              </strong>
+
+              <span>
+                PROJECTS
+              </span>
+
+            </div>
+
+          </header>
+
+
+          <div class="projects-grid">
+
+            {
+              careerProjects.map((project, index) => (
+                <article class="project-card">
+
+                  <div class="card-top">
+
+                    <span class="project-number">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    <span class="project-type">
+                      CAREER PROJECT
+                    </span>
+
+                  </div>
+
+
+                  <div class="project-heading">
+
+                    <h2>
+                      {project.name}
+                    </h2>
+
+                    <p>
+                      {project.category}
+                    </p>
+
+                  </div>
+
+
+                  <div class="project-details">
+
+                    <div class="detail-block">
+
+                      <h3>
+                        PAIN POINT
+                      </h3>
+
+                      <p>
+                        {project.pain}
+                      </p>
+
+                    </div>
+
+
+                    <div class="detail-block">
+
+                      <h3>
+                        PROBLEM SOLVING
+                      </h3>
+
+                      <p>
+                        {project.solution}
+                      </p>
+
+                    </div>
+
+
+                    <div class="detail-block">
+
+                      <h3>
+                        WHO USES
+                      </h3>
+
+                      <p>
+                        {project.users}
+                      </p>
+
+                    </div>
+
+                  </div>
+
+
+                  <div class="project-metrics">
+
+                    <div class="metric">
+
+                      <span>
+                        IMPORTANCE
+                      </span>
+
+                      <strong>
+                        {project.importance}
+                      </strong>
+
+                    </div>
+
+
+                    <div class="metric">
+
+                      <span>
+                        REQUIRED MEMBERS
+                      </span>
+
+                      <strong>
+                        {project.members}
+                      </strong>
+
+                    </div>
+
+                  </div>
+
+                </article>
+              ))
+            }
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           MID-RANGE PROJECTS
+      ====================================================== -->
+
+      <section class="projects-section mid-range-section">
+        <div class="container">
+
+          <header class="section-header">
+
+            <div class="section-title">
+
+              <span class="section-index">
+                02
+              </span>
+
+              <div>
+
+                <span class="section-kicker">
+                  PROJECT CATEGORY
+                </span>
+
+                <h1>
+                  MID-RANGE PROJECTS
+                </h1>
+
+                <p>
+                  Practical projects focused on technical skills,
+                  hands-on development, and portfolio building.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="section-count">
+
+              <strong>
+                {midRangeProjects.length}
+              </strong>
+
+              <span>
+                PROJECTS
+              </span>
+
+            </div>
+
+          </header>
+
+
+          <div class="projects-grid">
+
+            {
+              midRangeProjects.map((project, index) => (
+                <article class="project-card">
+
+                  <div class="card-top">
+
+                    <span class="project-number">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    <span class="project-type">
+                      MID-RANGE PROJECT
+                    </span>
+
+                  </div>
+
+
+                  <div class="project-heading">
+
+                    <h2>
+                      {project.name}
+                    </h2>
+
+                    <p>
+                      {project.category}
+                    </p>
+
+                  </div>
+
+
+                  <div class="project-details">
+
+                    <div class="detail-block">
+
+                      <h3>
+                        PAIN POINT
+                      </h3>
+
+                      <p>
+                        {project.pain}
+                      </p>
+
+                    </div>
+
+
+                    <div class="detail-block">
+
+                      <h3>
+                        PROBLEM SOLVING
+                      </h3>
+
+                      <p>
+                        {project.solution}
+                      </p>
+
+                    </div>
+
+
+                    <div class="detail-block">
+
+                      <h3>
+                        WHO USES
+                      </h3>
+
+                      <p>
+                        {project.users}
+                      </p>
+
+                    </div>
+
+                  </div>
+
+
+                  <div class="project-metrics">
+
+                    <div class="metric">
+
+                      <span>
+                        IMPORTANCE
+                      </span>
+
+                      <strong>
+                        {project.importance}
+                      </strong>
+
+                    </div>
+
+
+                    <div class="metric">
+
+                      <span>
+                        REQUIRED MEMBERS
+                      </span>
+
+                      <strong>
+                        {project.members}
+                      </strong>
+
+                    </div>
+
+                  </div>
+
+                </article>
+              ))
+            }
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           FINAL CTA
+      ====================================================== -->
+
       <ProjectsFinalCTA />
+
     </main>
 
+
     <Footer />
+
   </body>
 </html>
 
+
 <style>
+
+  /* =====================================================
+     GLOBAL
+  ====================================================== */
+
   :global(*) {
     box-sizing: border-box;
   }
@@ -48,7 +679,870 @@ import ProjectsFinalCTA from "../components/projects-final-cta/ProjectsFinalCTA.
 
   :global(body) {
     margin: 0;
-    background: #04121f;
-    font-family: Arial, Helvetica, sans-serif;
+
+    background: #ffffff;
+
+    color: #0f172a;
+
+    font-family:
+      Inter,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
   }
+
+
+  .container {
+    width: min(
+      1180px,
+      calc(100% - 40px)
+    );
+
+    margin: 0 auto;
+  }
+
+
+  /* =====================================================
+     PROJECT SECTIONS
+  ====================================================== */
+
+  .projects-section {
+    padding: 100px 0 115px;
+
+    background: #ffffff;
+  }
+
+  .mid-range-section {
+    border-top:
+      1px solid #e5e7eb;
+  }
+
+
+  /* =====================================================
+     SECTION HEADER
+  ====================================================== */
+
+  .section-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    margin-bottom: 52px;
+  }
+
+
+  .section-title {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 19px;
+  }
+
+
+  .section-index {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 45px;
+
+    width: 45px;
+    height: 45px;
+
+    margin-top: 5px;
+
+    border-radius: 11px;
+
+    background: #061a31;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 850;
+  }
+
+
+  .section-kicker {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #061a31;
+
+    font-size: 9px;
+
+    font-weight: 850;
+
+    letter-spacing: 0.17em;
+  }
+
+
+  .section-header h1 {
+    margin: 0;
+
+    color: #061a31;
+
+    font-size:
+      clamp(
+        43px,
+        6vw,
+        76px
+      );
+
+    line-height: 0.92;
+
+    letter-spacing: -0.065em;
+
+    font-weight: 850;
+  }
+
+
+  .section-header p {
+    max-width: 620px;
+
+    margin: 18px 0 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+
+  .section-count {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    flex-shrink: 0;
+  }
+
+
+  .section-count strong {
+    color: #061a31;
+
+    font-size: 60px;
+
+    line-height: 0.8;
+
+    letter-spacing: -0.07em;
+
+    font-weight: 850;
+  }
+
+
+  .section-count span {
+    margin-top: 11px;
+
+    color: #94a3b8;
+
+    font-size: 8px;
+
+    font-weight: 850;
+
+    letter-spacing: 0.16em;
+  }
+
+
+  /* =====================================================
+     PROJECT GRID
+  ====================================================== */
+
+  .projects-grid {
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+
+    gap: 18px;
+  }
+
+
+  /* =====================================================
+     PROJECT CARD
+  ====================================================== */
+
+  .project-card {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    min-height: 480px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: #061a31;
+
+    color: #ffffff;
+
+    overflow: hidden;
+
+    box-shadow:
+      0 16px 38px
+      rgba(
+        6,
+        26,
+        49,
+        0.14
+      );
+
+    transition:
+      transform 0.28s ease,
+      box-shadow 0.28s ease;
+  }
+
+
+  .project-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    right: -150px;
+    bottom: -150px;
+
+    border:
+      1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.07
+      );
+
+    border-radius: 50%;
+  }
+
+
+  .project-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -100px;
+    bottom: -100px;
+
+    border:
+      1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.05
+      );
+
+    border-radius: 50%;
+  }
+
+
+  .project-card:hover {
+    transform:
+      translateY(-6px);
+
+    box-shadow:
+      0 25px 55px
+      rgba(
+        6,
+        26,
+        49,
+        0.2
+      );
+  }
+
+
+  /* =====================================================
+     CARD TOP
+  ====================================================== */
+
+  .card-top {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+  }
+
+
+  .project-number {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    border:
+      1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.2
+      );
+
+    border-radius: 9px;
+
+    background:
+      rgba(
+        255,
+        255,
+        255,
+        0.06
+      );
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 850;
+  }
+
+
+  .project-type {
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.42
+      );
+
+    font-size: 7px;
+
+    font-weight: 850;
+
+    letter-spacing: 0.15em;
+  }
+
+
+  /* =====================================================
+     PROJECT HEADING
+  ====================================================== */
+
+  .project-heading {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 28px;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+      1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.16
+      );
+  }
+
+
+  .project-heading h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size:
+      clamp(
+        25px,
+        2.4vw,
+        32px
+      );
+
+    line-height: 1.02;
+
+    letter-spacing: -0.045em;
+
+    font-weight: 850;
+  }
+
+
+  .project-heading p {
+    margin: 9px 0 0;
+
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.58
+      );
+
+    font-size: 10px;
+
+    line-height: 1.45;
+
+    font-weight: 650;
+  }
+
+
+  /* =====================================================
+     PROJECT DETAILS
+  ====================================================== */
+
+  .project-details {
+    position: relative;
+
+    z-index: 2;
+
+    flex: 1;
+
+    padding-top: 21px;
+  }
+
+
+  .detail-block {
+    padding-bottom: 15px;
+  }
+
+
+  .detail-block + .detail-block {
+    margin-top: 4px;
+  }
+
+
+  .detail-block h3 {
+    margin:
+      0 0 6px;
+
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.43
+      );
+
+    font-size: 7px;
+
+    font-weight: 850;
+
+    letter-spacing: 0.15em;
+  }
+
+
+  .detail-block p {
+    margin: 0;
+
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.88
+      );
+
+    font-size: 10.5px;
+
+    line-height: 1.52;
+  }
+
+
+  .detail-block:nth-child(2) {
+    padding-left: 11px;
+
+    border-left:
+      2px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.17
+      );
+  }
+
+
+  /* =====================================================
+     METRICS
+  ====================================================== */
+
+  .project-metrics {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 7px;
+  }
+
+
+  .metric {
+    padding:
+      11px 12px;
+
+    border:
+      1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.14
+      );
+
+    border-radius: 10px;
+
+    background:
+      rgba(
+        255,
+        255,
+        255,
+        0.055
+      );
+  }
+
+
+  .metric span {
+    display: block;
+
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.4
+      );
+
+    font-size: 6px;
+
+    font-weight: 850;
+
+    letter-spacing: 0.12em;
+  }
+
+
+  .metric strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    line-height: 1;
+
+    font-weight: 850;
+  }
+
+
+  /* =====================================================
+     TABLET
+  ====================================================== */
+
+  @media (max-width: 1050px) {
+
+    .projects-grid {
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+    }
+
+  }
+
+
+  /* =====================================================
+     SMALL TABLET
+  ====================================================== */
+
+  @media (max-width: 760px) {
+
+    .container {
+      width:
+        min(
+          calc(100% - 32px),
+          620px
+        );
+    }
+
+
+    .projects-section {
+      padding:
+        75px 0 85px;
+    }
+
+
+    .section-header {
+      align-items: flex-start;
+
+      flex-direction: column;
+
+      gap: 28px;
+
+      margin-bottom: 40px;
+    }
+
+
+    .section-count {
+      flex-direction: row;
+
+      align-items: center;
+
+      gap: 10px;
+    }
+
+
+    .section-count span {
+      margin-top: 0;
+    }
+
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+
+
+    .project-card {
+      min-height: 440px;
+    }
+
+  }
+
+
+  /* =====================================================
+     MOBILE
+  ====================================================== */
+
+  @media (max-width: 560px) {
+
+    .container {
+      width:
+        calc(100% - 28px);
+    }
+
+
+    .projects-section {
+      padding:
+        58px 0 70px;
+    }
+
+
+    .section-title {
+      gap: 12px;
+    }
+
+
+    .section-index {
+      flex: 0 0 34px;
+
+      width: 34px;
+      height: 34px;
+
+      margin-top: 2px;
+
+      border-radius: 8px;
+
+      font-size: 8px;
+    }
+
+
+    .section-kicker {
+      margin-bottom: 9px;
+
+      font-size: 7px;
+    }
+
+
+    .section-header h1 {
+      font-size:
+        clamp(
+          35px,
+          11.5vw,
+          53px
+        );
+
+      line-height: 0.94;
+    }
+
+
+    .section-header p {
+      margin-top: 13px;
+
+      font-size: 12px;
+
+      line-height: 1.55;
+    }
+
+
+    .section-count strong {
+      font-size: 39px;
+    }
+
+
+    .section-count span {
+      font-size: 7px;
+    }
+
+
+    .projects-grid {
+      gap: 13px;
+    }
+
+
+    .project-card {
+      min-height: 0;
+
+      padding: 20px;
+
+      border-radius: 17px;
+    }
+
+
+    .project-number {
+      width: 33px;
+      height: 33px;
+
+      border-radius: 8px;
+
+      font-size: 8px;
+    }
+
+
+    .project-type {
+      font-size: 6px;
+    }
+
+
+    .project-heading {
+      margin-top: 22px;
+
+      padding-bottom: 16px;
+    }
+
+
+    .project-heading h2 {
+      font-size: 24px;
+
+      line-height: 1.04;
+    }
+
+
+    .project-heading p {
+      margin-top: 7px;
+
+      font-size: 9px;
+    }
+
+
+    .project-details {
+      padding-top: 17px;
+    }
+
+
+    .detail-block {
+      padding-bottom: 13px;
+    }
+
+
+    .detail-block h3 {
+      margin-bottom: 5px;
+
+      font-size: 6.5px;
+    }
+
+
+    .detail-block p {
+      font-size: 10px;
+
+      line-height: 1.5;
+    }
+
+
+    .project-metrics {
+      margin-top: 3px;
+    }
+
+
+    .metric {
+      padding: 10px;
+
+      border-radius: 8px;
+    }
+
+
+    .metric span {
+      font-size: 5.5px;
+    }
+
+
+    .metric strong {
+      font-size: 12px;
+    }
+
+  }
+
+
+  /* =====================================================
+     VERY SMALL MOBILE
+  ====================================================== */
+
+  @media (max-width: 360px) {
+
+    .container {
+      width:
+        calc(100% - 22px);
+    }
+
+
+    .section-header h1 {
+      font-size: 33px;
+    }
+
+
+    .project-card {
+      padding: 17px;
+    }
+
+
+    .project-heading h2 {
+      font-size: 22px;
+    }
+
+  }
+
 </style>
